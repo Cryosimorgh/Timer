@@ -9,13 +9,20 @@ import (
 )
 
 func initExcelFile() {
+	date := time.Now().Format("2006-01-02")
+	sheetName := date
+
 	if _, err := os.Stat(excelFileName); os.IsNotExist(err) {
 		f := excelize.NewFile()
-		f.SetCellValue("Sheet1", "A1", "Timestamp")
-		f.SetCellValue("Sheet1", "B1", "Event")
-		f.SetCellValue("Sheet1", "C1", "Activity Name")
-		f.SetCellValue("Sheet1", "D1", "Duration")
-		f.SaveAs(excelFileName)
+		f.NewSheet(sheetName)
+		f.SetCellValue(sheetName, "A1", "Timestamp")
+		f.SetCellValue(sheetName, "B1", "Event")
+		f.SetCellValue(sheetName, "C1", "Activity Name")
+		f.SetCellValue(sheetName, "D1", "Duration")
+		f.DeleteSheet("Sheet1")
+		if err := f.SaveAs(excelFileName); err != nil {
+			fmt.Println("Error creating Excel file:", err)
+		}
 	}
 }
 
@@ -31,17 +38,24 @@ func saveToExcel(entry TimerEntry) {
 	sheetName := date
 
 	// Create a new sheet for a new day if it doesn't exist
-	if _, err := f.GetSheetIndex(sheetName); err != nil {
+	if sheetIndex, err := f.GetSheetIndex(sheetName); err != nil || sheetIndex == -1 {
 		f.NewSheet(sheetName)
 		f.SetCellValue(sheetName, "A1", "Timestamp")
 		f.SetCellValue(sheetName, "B1", "Event")
 		f.SetCellValue(sheetName, "C1", "Activity Name")
 		f.SetCellValue(sheetName, "D1", "Duration")
+		f.DeleteSheet("Sheet1")
 	}
 
-	rows, _ := f.GetRows(sheetName)
+	// Get the last row index
+	rows, err := f.GetRows(sheetName)
+	if err != nil {
+		fmt.Println("Error getting rows:", err)
+		return
+	}
 	rowIndex := len(rows) + 1
 
+	// Write data to the sheet
 	f.SetCellValue(sheetName, fmt.Sprintf("A%d", rowIndex), entry.Timestamp)
 	f.SetCellValue(sheetName, fmt.Sprintf("B%d", rowIndex), entry.Event)
 	f.SetCellValue(sheetName, fmt.Sprintf("C%d", rowIndex), entry.Name)
@@ -51,8 +65,9 @@ func saveToExcel(entry TimerEntry) {
 			fmt.Sprintf("%.1f minutes", entry.Duration.Minutes()))
 	}
 
+	// Save the file
 	if err := f.Save(); err != nil {
-		fmt.Println("Error: The file is already open.")
+		fmt.Println("Error: The file is already open or inaccessible.")
 		fmt.Println("1. Save to a new file")
 		fmt.Println("2. Retry")
 		fmt.Println("3. Exit")
@@ -78,14 +93,17 @@ func saveToExcel(entry TimerEntry) {
 		default:
 			fmt.Println("Invalid choice")
 		}
+	} else {
+		fmt.Println("Data saved successfully.")
 	}
 }
+
 func getUniqueFilename() string {
 	return fmt.Sprintf("report_%s.xlsx", time.Now().Format("20060102_150405"))
 }
 
 func saveWithRetry(f *excelize.File, filename string, maxRetries int) error {
-	for range maxRetries {
+	for i := 0; i < maxRetries; i++ {
 		if err := f.SaveAs(filename); err == nil {
 			return nil // Success
 		}

@@ -2,8 +2,11 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"sync"
 	"time"
 
+	_ "fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
 
@@ -11,8 +14,10 @@ import (
 )
 
 func main() {
+	Wg = sync.WaitGroup{}
 	// Create app and window
 	App = app.New()
+	App.SetIcon(ResourceIconPng)
 	window := windowMaker(App)
 
 	// Initialize UI components
@@ -28,7 +33,7 @@ func main() {
 	exitButton.Importance = widget.HighImportance
 
 	// Make Draggable
-	draggableHeader := makeDraggable(window)
+	//draggableHeader := makeDraggable(window)
 	// Create button container
 	buttonContainer := container.NewHBox(
 		startButton,
@@ -37,7 +42,7 @@ func main() {
 	)
 	// Create layout
 	content := container.NewVBox(
-		draggableHeader,
+		//draggableHeader,
 		nameEntry,
 		timeLabel,
 		buttonContainer,
@@ -52,6 +57,17 @@ func main() {
 
 	// Show and run app
 	window.SetContent(content)
+	window.SetCloseIntercept(func() {
+		logEvent("EXIT")
+		Wg.Add(1)
+		log.Print("Exiting")
+		// Force immediate Excel save before closing
+		go func() {
+			time.Sleep(100 * time.Millisecond) // Let saveToExcel finish
+			App.Quit()
+		}()
+	})
+
 	window.ShowAndRun()
 }
 

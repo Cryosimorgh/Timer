@@ -7,10 +7,10 @@ import (
 func updateTimeDisplay() {
 	for {
 		if state.running && !state.paused {
-			elapsed := time.Since(state.startTime)
-			timeLabel.SetText(formatDuration(elapsed))
+			Elapsed += WaitDuration
+			timeLabel.SetText(formatDuration(Elapsed))
 		}
-		time.Sleep(200 * time.Millisecond)
+		time.Sleep(WaitDuration)
 	}
 }
 
@@ -26,11 +26,9 @@ func startTimer() {
 func togglePause() {
 	if state.running {
 		if state.paused {
-			state.startTime = time.Now().Add(-state.pausedTime)
 			state.paused = false
 			logEvent("RESUME")
 		} else {
-			state.pausedTime = time.Since(state.startTime)
 			state.paused = true
 			logEvent("PAUSE")
 		}
@@ -43,7 +41,7 @@ func toggleStop() {
 		state.paused = false
 		logEvent("STOP")
 		timeLabel.SetText("00:00:00")
-		state.pausedTime = 0
+		Elapsed = 0
 	}
 }
 
@@ -55,9 +53,9 @@ func logEvent(eventType string) {
 	}
 
 	if eventType == "STOP" {
-		entry.Duration = time.Since(state.startTime) + state.pausedTime
-	} else if eventType == "EXIT" { // New event type for app exit
-		entry.Duration = time.Since(state.startTime) + state.pausedTime
+		entry.Duration = Elapsed
+	} else if eventType == "EXIT" {
+		entry.Duration = Elapsed
 	}
 
 	state.entries = append(state.entries, entry)

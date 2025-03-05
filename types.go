@@ -1,19 +1,22 @@
 package main
 
 import (
+	"sync"
 	"time"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/widget"
 )
 
+var Elapsed time.Duration = 0
+var WaitDuration = 200 * time.Millisecond
+
 type TimerState struct {
-	startTime   time.Time
-	pausedTime  time.Duration
-	running     bool
-	paused      bool
-	entries     []TimerEntry
-	currentName string
+	startTime  time.Time
+	pausedTime time.Duration
+	running    bool
+	paused     bool
+	entries    []TimerEntry
 }
 
 type TimerEntry struct {
@@ -32,4 +35,5 @@ var (
 
 var (
 	App fyne.App
+	Wg  sync.WaitGroup
 )

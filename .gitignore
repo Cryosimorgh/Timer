@@ -1,3 +1,5 @@
 /main.go.exe
 /time_tracker.xlsx
 /vendor
+/*.exe
+*.xlsx

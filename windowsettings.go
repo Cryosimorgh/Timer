@@ -13,7 +13,7 @@ func windowMaker(myApp fyne.App) fyne.Window {
 	window.SetFixedSize(true)
 
 	// Create draggable header
-	header := newDraggableHeader(window)
+	//header := newDraggableHeader(window)
 
 	// Create close button
 	closeButton := widget.NewButton("X", func() {
@@ -22,13 +22,14 @@ func windowMaker(myApp fyne.App) fyne.Window {
 	closeButton.Importance = widget.HighImportance
 
 	content := container.NewBorder(
-		header, nil, nil, closeButton,
+		nil, nil, nil, closeButton,
 		widget.NewLabel("Time Tracker"),
 	)
 
 	window.SetContent(content)
 	return window
 }
-func makeDraggable(window fyne.Window) fyne.CanvasObject {
-	return newDraggableHeader(window)
-}
+
+// func makeDraggable(window fyne.Window) fyne.CanvasObject {
+// 	return newDraggableHeader(window)
+// }
