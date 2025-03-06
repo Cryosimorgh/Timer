@@ -6,9 +6,9 @@ import (
 	"fyne.io/fyne/v2/widget"
 )
 
-func windowMaker(myApp fyne.App) fyne.Window {
+func windowMaker(myApp fyne.App, name string) fyne.Window {
 
-	window := myApp.NewWindow("Time Tracker")
+	window := myApp.NewWindow(name)
 	window.Resize(fyne.NewSize(400, 300))
 	window.SetFixedSize(true)
 
@@ -23,7 +23,7 @@ func windowMaker(myApp fyne.App) fyne.Window {
 
 	content := container.NewBorder(
 		nil, nil, nil, closeButton,
-		widget.NewLabel("Time Tracker"),
+		widget.NewLabel(name),
 	)
 
 	window.SetContent(content)

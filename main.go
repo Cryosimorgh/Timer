@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"sync"
 	"time"
 
-	_ "fyne.io/fyne/v2"
+	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
 
@@ -18,12 +17,21 @@ func main() {
 	// Create app and window
 	App = app.New()
 	App.SetIcon(ResourceIconPng)
-	window := windowMaker(App)
+	window := windowMaker(App, "Time Tracker")
+	window.SetMaster()
 
 	// Initialize UI components
 	timeLabel = widget.NewLabel("00:00:00")
+	timeLabel.Alignment = fyne.TextAlignCenter
+
 	nameEntry = widget.NewEntry()
 	nameEntry.SetPlaceHolder("Enter activity name")
+
+	LogEntry = widget.NewLabel("Logs:...")
+	LogEntry.Wrapping = fyne.TextWrapWord
+	LogEntry.Alignment = fyne.TextAlignCenter
+	LogEntry.TextStyle.Italic = true
+	LogEntry.TextStyle.Bold = true
 
 	// Create buttons
 	startButton := button("Start", startTimer)
@@ -32,14 +40,14 @@ func main() {
 	exitButton := button("Exit", exitApp)
 	exitButton.Importance = widget.HighImportance
 
-	// Make Draggable
-	//draggableHeader := makeDraggable(window)
-	// Create button container
-	buttonContainer := container.NewHBox(
-		startButton,
-		pauseButton,
-		stopButton,
+	buttonContainer := container.NewCenter(
+		container.NewHBox(
+			startButton,
+			pauseButton,
+			stopButton,
+		),
 	)
+
 	// Create layout
 	content := container.NewVBox(
 		//draggableHeader,
@@ -47,6 +55,7 @@ func main() {
 		timeLabel,
 		buttonContainer,
 		exitButton,
+		LogEntry,
 	)
 
 	// Initialize Excel file
@@ -60,7 +69,7 @@ func main() {
 	window.SetCloseIntercept(func() {
 		logEvent("EXIT")
 		Wg.Add(1)
-		log.Print("Exiting")
+		LogEntry.SetText("Saving to Excel...")
 		// Force immediate Excel save before closing
 		go func() {
 			time.Sleep(100 * time.Millisecond) // Let saveToExcel finish

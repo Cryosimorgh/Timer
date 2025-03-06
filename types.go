@@ -34,6 +34,7 @@ var (
 )
 
 var (
-	App fyne.App
-	Wg  sync.WaitGroup
+	App      fyne.App
+	Wg       sync.WaitGroup
+	LogEntry *widget.Label
 )
