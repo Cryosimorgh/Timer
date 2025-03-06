@@ -12,11 +12,10 @@ var Elapsed time.Duration = 0
 var WaitDuration = 200 * time.Millisecond
 
 type TimerState struct {
-	startTime  time.Time
-	pausedTime time.Duration
-	running    bool
-	paused     bool
-	entries    []TimerEntry
+	startTime time.Time
+	running   bool
+	paused    bool
+	entries   []TimerEntry
 }
 
 type TimerEntry struct {
