@@ -176,8 +176,10 @@ func saveWithRetry(f *excelize.File, filename string, maxRetries int) error {
 
 func resetLogText() {
 	Wg.Add(1)
-	defer Wg.Done()
-	time.Sleep(6 * time.Second) // Let saveToExcel finish
+	go func() {
+		defer Wg.Done()
+		time.Sleep(6 * time.Second) // Let saveToExcel finish
 
-	LogEntry.SetText("logs:...")
+		LogEntry.SetText("logs:...")
+	}()
 }
