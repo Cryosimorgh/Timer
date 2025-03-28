@@ -3,7 +3,7 @@ module timer
 go 1.23.4
 
 require (
-	fyne.io/fyne/v2 v2.5.4
+	fyne.io/fyne/v2 v2.5.5
 	github.com/xuri/excelize/v2 v2.9.0
 )
 
