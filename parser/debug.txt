@@ -1,0 +1,879 @@
+2025/04/27 13:09:42.712721 main.go:40: 🛠 [DEBUG] Starting run
+2025/04/27 13:09:42.713271 main.go:41: 📂 Current working directory: D:\Repos\Timer\parser
+2025/04/27 13:09:42.713814 main.go:42: ✍️ Writing test line to debug.txt
+2025/04/27 13:09:42.717180 main.go:50: ✅ Opened time_tracker.xlsx
+2025/04/27 13:09:42.717450 main.go:55: 🔍 Found 36 sheets: [2025-03-23 2025-03-24 2025-03-25 2025-03-26 2025-03-27 2025-03-28 2025-03-29 2025-03-30 2025-03-31 2025-04-01 2025-04-02 2025-04-03 2025-04-04 2025-04-05 2025-04-06 2025-04-07 2025-04-08 2025-04-09 2025-04-10 2025-04-11 2025-04-12 2025-04-13 2025-04-14 2025-04-15 2025-04-16 2025-04-17 2025-04-18 2025-04-19 2025-04-20 2025-04-21 2025-04-22 2025-04-23 2025-04-24 2025-04-25 2025-04-26 2025-04-27]
+2025/04/27 13:09:42.717627 main.go:57:   → Scanning sheet "2025-03-23"
+2025/04/27 13:09:42.719285 main.go:63:     📑 3 rows in sheet
+2025/04/27 13:09:42.719790 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.719790 main.go:65:       row 2: []string{"3/23/25 23:30", "EXIT"}
+2025/04/27 13:09:42.719790 main.go:65:       row 3: []string{"3/23/25 23:49", "START", "redoing lost changes"}
+2025/04/27 13:09:42.719790 main.go:57:   → Scanning sheet "2025-03-24"
+2025/04/27 13:09:42.722115 main.go:63:     📑 29 rows in sheet
+2025/04/27 13:09:42.722342 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.722569 main.go:65:       row 2: []string{"3/24/25 00:13", "PAUSE", "redoing lost changes"}
+2025/04/27 13:09:42.722830 main.go:65:       row 3: []string{"3/24/25 01:15", "RESUME", "redoing lost changes"}
+2025/04/27 13:09:42.722830 main.go:65:       row 4: []string{"3/24/25 01:31", "PAUSE", "redoing lost changes"}
+2025/04/27 13:09:42.722830 main.go:65:       row 5: []string{"3/24/25 01:31", "RESUME", "redoing lost changes"}
+2025/04/27 13:09:42.723413 main.go:65:       row 6: []string{"3/24/25 01:40", "PAUSE", "redoing lost changes"}
+2025/04/27 13:09:42.723413 main.go:65:       row 7: []string{"3/24/25 02:41", "RESUME", "redoing lost changes"}
+2025/04/27 13:09:42.723413 main.go:65:       row 8: []string{"3/24/25 03:16", "PAUSE", "redoing lost changes"}
+2025/04/27 13:09:42.724079 main.go:65:       row 9: []string{"3/24/25 03:33", "RESUME", "redoing lost changes"}
+2025/04/27 13:09:42.724079 main.go:65:       row 10: []string{"3/24/25 04:02", "PAUSE", "redoing lost changes"}
+2025/04/27 13:09:42.724589 main.go:65:       row 11: []string{"3/24/25 04:44", "RESUME", "redoing lost changes"}
+2025/04/27 13:09:42.724693 main.go:65:       row 12: []string{"3/24/25 05:27", "PAUSE", "redoing lost changes"}
+2025/04/27 13:09:42.724693 main.go:65:       row 13: []string{"3/24/25 05:27", "STOP", "redoing lost changes", "154.7 minutes"}
+2025/04/27 13:09:42.724693 main.go:75:         ✅ STOP found: "redoing lost changes" (154.7 minutes)
+2025/04/27 13:09:42.725321 main.go:65:       row 14: []string{"3/24/25 05:30", "EXIT", "redoing lost changes"}
+2025/04/27 13:09:42.725648 main.go:65:       row 15: []string{"3/24/25 15:03", "START"}
+2025/04/27 13:09:42.725648 main.go:65:       row 16: []string{"3/24/25 15:03", "PAUSE"}
+2025/04/27 13:09:42.725648 main.go:65:       row 17: []string{"3/24/25 15:03", "RESUME", "ensuring proper forwarding"}
+2025/04/27 13:09:42.726154 main.go:65:       row 18: []string{"3/24/25 15:30", "PAUSE", "ensuring proper forwarding"}
+2025/04/27 13:09:42.726154 main.go:65:       row 19: []string{"3/24/25 15:40", "RESUME", "ensuring proper forwarding"}
+2025/04/27 13:09:42.726154 main.go:65:       row 20: []string{"3/24/25 15:55", "PAUSE", "ensuring proper forwarding"}
+2025/04/27 13:09:42.726681 main.go:65:       row 21: []string{"3/24/25 15:56", "RESUME", "tester script refactor"}
+2025/04/27 13:09:42.726776 main.go:65:       row 22: []string{"3/24/25 17:17", "PAUSE", "tester script refactor"}
+2025/04/27 13:09:42.726776 main.go:65:       row 23: []string{"3/24/25 17:38", "RESUME", "tester script refactor"}
+2025/04/27 13:09:42.727281 main.go:65:       row 24: []string{"3/24/25 17:39", "PAUSE", "tester script refactor"}
+2025/04/27 13:09:42.727281 main.go:65:       row 25: []string{"3/24/25 18:01", "RESUME", "tester script refactor", "184 minutes", "", "estimation due to data loss"}
+2025/04/27 13:09:42.727281 main.go:65:       row 26: []string{"3/24/25 22:37", "START", "the previous 3 and odd hours was lost due to shut down without saving"}
+2025/04/27 13:09:42.727830 main.go:65:       row 27: []string{"3/24/25 22:37", "PAUSE", "the previous 3 and odd hours was lost due to shut down without saving"}
+2025/04/27 13:09:42.728067 main.go:65:       row 28: []string{"3/24/25 22:37", "RESUME", "testing backend"}
+2025/04/27 13:09:42.728129 main.go:65:       row 29: []string{"3/24/25 23:05", "PAUSE", "testing backend"}
+2025/04/27 13:09:42.728129 main.go:57:   → Scanning sheet "2025-03-25"
+2025/04/27 13:09:42.728922 main.go:63:     📑 13 rows in sheet
+2025/04/27 13:09:42.728922 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.728922 main.go:65:       row 2: []string{"3/25/25 01:01", "RESUME", "testing backend"}
+2025/04/27 13:09:42.728922 main.go:65:       row 3: []string{"3/25/25 01:26", "PAUSE", "testing backend"}
+2025/04/27 13:09:42.729967 main.go:65:       row 4: []string{"3/25/25 01:37", "RESUME", "testing backend"}
+2025/04/27 13:09:42.730053 main.go:65:       row 5: []string{"3/25/25 02:03", "PAUSE", "testing backend"}
+2025/04/27 13:09:42.730053 main.go:65:       row 6: []string{"3/25/25 02:38", "RESUME", "testing backend"}
+2025/04/27 13:09:42.730601 main.go:65:       row 7: []string{"3/25/25 04:07", "PAUSE", "testing backend"}
+2025/04/27 13:09:42.730670 main.go:65:       row 8: []string{"3/25/25 04:38", "RESUME", "testing backend"}
+2025/04/27 13:09:42.730670 main.go:65:       row 9: []string{"3/25/25 05:37", "PAUSE", "testing backend"}
+2025/04/27 13:09:42.731297 main.go:65:       row 10: []string{"3/25/25 05:38", "RESUME", "testing backend"}
+2025/04/27 13:09:42.731404 main.go:65:       row 11: []string{"3/25/25 05:53", "PAUSE", "testing backend"}
+2025/04/27 13:09:42.731404 main.go:65:       row 12: []string{"3/25/25 05:53", "STOP", "testing backend", "238.9 minutes"}
+2025/04/27 13:09:42.731404 main.go:75:         ✅ STOP found: "testing backend" (238.9 minutes)
+2025/04/27 13:09:42.732021 main.go:65:       row 13: []string{"3/25/25 05:53", "EXIT", "testing backend"}
+2025/04/27 13:09:42.732224 main.go:57:   → Scanning sheet "2025-03-26"
+2025/04/27 13:09:42.733702 main.go:63:     📑 26 rows in sheet
+2025/04/27 13:09:42.733702 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.733702 main.go:65:       row 2: []string{"3/26/25 05:33", "START"}
+2025/04/27 13:09:42.733702 main.go:65:       row 3: []string{"3/26/25 05:57", "PAUSE"}
+2025/04/27 13:09:42.733702 main.go:65:       row 4: []string{"3/26/25 05:57", "STOP", "", "24.0 minutes"}
+2025/04/27 13:09:42.733702 main.go:75:         ✅ STOP found: "" (24.0 minutes)
+2025/04/27 13:09:42.733702 main.go:65:       row 5: []string{"3/26/25 13:26", "START", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.735209 main.go:65:       row 6: []string{"3/26/25 14:36", "PAUSE", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.735209 main.go:65:       row 7: []string{"3/26/25 14:43", "RESUME", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.735209 main.go:65:       row 8: []string{"3/26/25 14:56", "PAUSE", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.735209 main.go:65:       row 9: []string{"3/26/25 15:03", "RESUME", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.735209 main.go:65:       row 10: []string{"3/26/25 15:19", "PAUSE", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.735209 main.go:65:       row 11: []string{"3/26/25 15:19", "RESUME", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.735209 main.go:65:       row 12: []string{"3/26/25 15:26", "PAUSE", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.735209 main.go:65:       row 13: []string{"3/26/25 15:28", "RESUME", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.735209 main.go:65:       row 14: []string{"3/26/25 15:47", "PAUSE", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.737289 main.go:65:       row 15: []string{"3/26/25 15:47", "RESUME", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.737289 main.go:65:       row 16: []string{"3/26/25 16:13", "PAUSE", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.737289 main.go:65:       row 17: []string{"3/26/25 16:16", "RESUME", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.737289 main.go:65:       row 18: []string{"3/26/25 16:35", "PAUSE", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.738258 main.go:65:       row 19: []string{"3/26/25 17:40", "RESUME", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.738471 main.go:65:       row 20: []string{"3/26/25 17:44", "PAUSE", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.738471 main.go:65:       row 21: []string{"3/26/25 17:45", "RESUME", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.738471 main.go:65:       row 22: []string{"3/26/25 18:05", "PAUSE", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.738471 main.go:65:       row 23: []string{"3/26/25 18:09", "RESUME", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.738471 main.go:65:       row 24: []string{"3/26/25 18:49", "PAUSE", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.738471 main.go:65:       row 25: []string{"3/26/25 19:23", "RESUME", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.738471 main.go:65:       row 26: []string{"3/26/25 19:33", "PAUSE", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.738471 main.go:57:   → Scanning sheet "2025-03-27"
+2025/04/27 13:09:42.738471 main.go:63:     📑 5 rows in sheet
+2025/04/27 13:09:42.738471 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.738471 main.go:65:       row 2: []string{"3/27/25 00:39", "STOP", "trying to find the root cause of connection flaw", "244.0 minutes"}
+2025/04/27 13:09:42.738471 main.go:75:         ✅ STOP found: "trying to find the root cause of connection flaw" (244.0 minutes)
+2025/04/27 13:09:42.738471 main.go:65:       row 3: []string{"3/27/25 00:39", "EXIT", "trying to find the root cause of connection flaw"}
+2025/04/27 13:09:42.738471 main.go:65:       row 4: []string{"3/27/25 02:49", "EXIT"}
+2025/04/27 13:09:42.738471 main.go:65:       row 5: []string{"3/28/25 23:32", "START", "Making Standalone p2p"}
+2025/04/27 13:09:42.738471 main.go:57:   → Scanning sheet "2025-03-28"
+2025/04/27 13:09:42.741092 main.go:63:     📑 30 rows in sheet
+2025/04/27 13:09:42.741092 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.741092 main.go:65:       row 2: []string{"3/28/25 01:23", "PAUSE", "Making Standalone p2p"}
+2025/04/27 13:09:42.741092 main.go:65:       row 3: []string{"3/28/25 01:33", "RESUME", "Making Standalone p2p"}
+2025/04/27 13:09:42.741092 main.go:65:       row 4: []string{"3/28/25 03:15", "PAUSE", "Making Standalone p2p"}
+2025/04/27 13:09:42.741092 main.go:65:       row 5: []string{"3/28/25 03:25", "RESUME", "Making Standalone p2p"}
+2025/04/27 13:09:42.741092 main.go:65:       row 6: []string{"3/28/25 03:46", "PAUSE", "Making Standalone p2p"}
+2025/04/27 13:09:42.741092 main.go:65:       row 7: []string{"3/28/25 04:29", "RESUME", "Making Standalone p2p"}
+2025/04/27 13:09:42.741092 main.go:65:       row 8: []string{"3/28/25 04:56", "STOP", "Making Standalone p2p", "261 minutes"}
+2025/04/27 13:09:42.743598 main.go:75:         ✅ STOP found: "Making Standalone p2p" (261 minutes)
+2025/04/27 13:09:42.743598 main.go:65:       row 9: []string{"3/28/25 15:18", "START", "setting up client"}
+2025/04/27 13:09:42.743598 main.go:65:       row 10: []string{"3/28/25 16:10", "PAUSE", "setting up client"}
+2025/04/27 13:09:42.743598 main.go:65:       row 11: []string{"3/28/25 16:10", "STOP", "setting up client", "51.6 minutes"}
+2025/04/27 13:09:42.743598 main.go:75:         ✅ STOP found: "setting up client" (51.6 minutes)
+2025/04/27 13:09:42.743598 main.go:65:       row 12: []string{"3/28/25 16:10", "EXIT", "setting up client"}
+2025/04/27 13:09:42.743598 main.go:65:       row 13: []string{"3/28/25 16:32", "EXIT"}
+2025/04/27 13:09:42.743598 main.go:65:       row 14: []string{"3/28/25 16:32", "START", "Cleaning up Server Code"}
+2025/04/27 13:09:42.743598 main.go:65:       row 15: []string{"3/28/25 16:42", "PAUSE", "Cleaning up Server Code"}
+2025/04/27 13:09:42.743598 main.go:65:       row 16: []string{"3/28/25 16:51", "RESUME", "Cleaning up Server Code"}
+2025/04/27 13:09:42.743598 main.go:65:       row 17: []string{"3/28/25 17:36", "PAUSE", "Cleaning up Server Code"}
+2025/04/27 13:09:42.743598 main.go:65:       row 18: []string{"3/28/25 19:56", "RESUME", "Cleaning up Server Code"}
+2025/04/27 13:09:42.743598 main.go:65:       row 19: []string{"3/28/25 20:12", "PAUSE", "Cleaning up Server Code"}
+2025/04/27 13:09:42.743598 main.go:65:       row 20: []string{"3/28/25 20:12", "RESUME", "Cleaning up Client"}
+2025/04/27 13:09:42.743598 main.go:65:       row 21: []string{"3/28/25 21:09", "PAUSE", "Cleaning up Client"}
+2025/04/27 13:09:42.743598 main.go:65:       row 22: []string{"3/28/25 21:25", "RESUME", "Cleaning up Client"}
+2025/04/27 13:09:42.743598 main.go:65:       row 23: []string{"3/28/25 21:25", "PAUSE", "Cleaning up Client"}
+2025/04/27 13:09:42.743598 main.go:65:       row 24: []string{"3/28/25 21:25", "RESUME", "changing client to accept mic input"}
+2025/04/27 13:09:42.743598 main.go:65:       row 25: []string{"3/28/25 22:05", "PAUSE", "changing client to accept mic input"}
+2025/04/27 13:09:42.743598 main.go:65:       row 26: []string{"3/28/25 23:41", "RESUME", "changing client to accept mic input"}
+2025/04/27 13:09:42.743598 main.go:65:       row 27: []string{"3/28/25 23:52", "PAUSE", "changing client to accept mic input"}
+2025/04/27 13:09:42.743598 main.go:65:       row 28: []string{"3/28/25 23:54", "RESUME", "changing client to accept mic input"}
+2025/04/27 13:09:42.743598 main.go:65:       row 29: []string{"3/28/25 23:58", "PAUSE", "changing client to accept mic input"}
+2025/04/27 13:09:42.743598 main.go:65:       row 30: []string{"3/28/25 23:58", "RESUME", "testing if client works as intended"}
+2025/04/27 13:09:42.743598 main.go:57:   → Scanning sheet "2025-03-29"
+2025/04/27 13:09:42.743598 main.go:63:     📑 19 rows in sheet
+2025/04/27 13:09:42.743598 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.743598 main.go:65:       row 2: []string{"3/29/25 00:17", "PAUSE", "testing if client works as intended"}
+2025/04/27 13:09:42.743598 main.go:65:       row 3: []string{"3/29/25 00:18", "STOP", "testing if client works as intended", "200.8 minutes"}
+2025/04/27 13:09:42.743598 main.go:75:         ✅ STOP found: "testing if client works as intended" (200.8 minutes)
+2025/04/27 13:09:42.743598 main.go:65:       row 4: []string{"3/29/25 02:14", "EXIT", "testing if client works as intended"}
+2025/04/27 13:09:42.743598 main.go:65:       row 5: []string{"3/29/25 14:35", "START", "debugging client code"}
+2025/04/27 13:09:42.743598 main.go:65:       row 6: []string{"3/29/25 15:40", "PAUSE", "debugging client code"}
+2025/04/27 13:09:42.743598 main.go:65:       row 7: []string{"3/29/25 17:05", "RESUME", "debugging client code"}
+2025/04/27 13:09:42.743598 main.go:65:       row 8: []string{"3/29/25 17:11", "PAUSE", "debugging client code"}
+2025/04/27 13:09:42.743598 main.go:65:       row 9: []string{"3/29/25 18:06", "RESUME", "debugging client code"}
+2025/04/27 13:09:42.746725 main.go:65:       row 10: []string{"3/29/25 18:38", "PAUSE", "debugging client code"}
+2025/04/27 13:09:42.746725 main.go:65:       row 11: []string{"3/29/25 19:38", "RESUME", "debugging client code"}
+2025/04/27 13:09:42.746725 main.go:65:       row 12: []string{"3/29/25 20:23", "PAUSE", "debugging client code"}
+2025/04/27 13:09:42.746725 main.go:65:       row 13: []string{"3/29/25 20:24", "RESUME", "fixing doublicate offerings"}
+2025/04/27 13:09:42.746725 main.go:65:       row 14: []string{"3/29/25 20:32", "PAUSE", "fixing doublicate offerings"}
+2025/04/27 13:09:42.746725 main.go:65:       row 15: []string{"3/29/25 22:46", "RESUME", "fixing doublicate offerings"}
+2025/04/27 13:09:42.746725 main.go:65:       row 16: []string{"3/29/25 23:07", "PAUSE", "fixing doublicate offerings"}
+2025/04/27 13:09:42.746725 main.go:65:       row 17: []string{"3/29/25 23:15", "RESUME", "removing douplicate connections"}
+2025/04/27 13:09:42.746725 main.go:65:       row 18: []string{"3/29/25 23:30", "PAUSE", "removing douplicate connections"}
+2025/04/27 13:09:42.746725 main.go:65:       row 19: []string{"3/29/25 23:32", "RESUME", "removing douplicate connections"}
+2025/04/27 13:09:42.746725 main.go:57:   → Scanning sheet "2025-03-30"
+2025/04/27 13:09:42.746725 main.go:63:     📑 28 rows in sheet
+2025/04/27 13:09:42.746725 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.746725 main.go:65:       row 2: []string{"3/30/25 01:43", "PAUSE", "removing douplicate connections"}
+2025/04/27 13:09:42.746725 main.go:65:       row 3: []string{"3/30/25 01:46", "RESUME", "candidate handling"}
+2025/04/27 13:09:42.746725 main.go:65:       row 4: []string{"3/30/25 02:08", "PAUSE", "fixed?"}
+2025/04/27 13:09:42.746725 main.go:65:       row 5: []string{"3/30/25 02:08", "RESUME", "fixed?"}
+2025/04/27 13:09:42.746725 main.go:65:       row 6: []string{"3/30/25 02:42", "PAUSE", "fixed?"}
+2025/04/27 13:09:42.746725 main.go:65:       row 7: []string{"3/30/25 02:54", "RESUME", "fixed message relay"}
+2025/04/27 13:09:42.746725 main.go:65:       row 8: []string{"3/30/25 02:55", "PAUSE", "fixed message relay"}
+2025/04/27 13:09:42.746725 main.go:65:       row 9: []string{"3/30/25 02:55", "RESUME", "relaying audio through track instead of webrtc messages"}
+2025/04/27 13:09:42.746725 main.go:65:       row 10: []string{"3/30/25 03:11", "PAUSE", "relaying audio through track instead of webrtc messages"}
+2025/04/27 13:09:42.746725 main.go:65:       row 11: []string{"3/30/25 03:27", "RESUME", "relaying audio through track instead of webrtc messages"}
+2025/04/27 13:09:42.746725 main.go:65:       row 12: []string{"3/30/25 03:39", "PAUSE", "debugging audio relay"}
+2025/04/27 13:09:42.746725 main.go:65:       row 13: []string{"3/30/25 03:39", "RESUME", "debugging audio relay"}
+2025/04/27 13:09:42.746725 main.go:65:       row 14: []string{"3/30/25 03:51", "PAUSE", "debugging audio relay"}
+2025/04/27 13:09:42.746725 main.go:65:       row 15: []string{"3/30/25 04:16", "RESUME", "debugging audio relay"}
+2025/04/27 13:09:42.746725 main.go:65:       row 16: []string{"3/30/25 05:14", "PAUSE", "debugging audio relay"}
+2025/04/27 13:09:42.746725 main.go:65:       row 17: []string{"3/30/25 05:14", "RESUME", "uploading"}
+2025/04/27 13:09:42.746725 main.go:65:       row 18: []string{"3/30/25 05:28", "PAUSE", "uploading"}
+2025/04/27 13:09:42.746725 main.go:65:       row 19: []string{"3/30/25 05:28", "STOP", "uploading", "489.8 minutes"}
+2025/04/27 13:09:42.746725 main.go:75:         ✅ STOP found: "uploading" (489.8 minutes)
+2025/04/27 13:09:42.746725 main.go:65:       row 20: []string{"3/30/25 05:49", "EXIT", "uploading"}
+2025/04/27 13:09:42.746725 main.go:65:       row 21: []string{"3/30/25 14:43", "START", "ensuring proper functionality"}
+2025/04/27 13:09:42.746725 main.go:65:       row 22: []string{"3/30/25 16:08", "PAUSE", "ensuring proper functionality"}
+2025/04/27 13:09:42.746725 main.go:65:       row 23: []string{"3/30/25 16:17", "RESUME", "ensuring proper functionality"}
+2025/04/27 13:09:42.746725 main.go:65:       row 24: []string{"3/30/25 16:26", "PAUSE", "ensuring proper functionality"}
+2025/04/27 13:09:42.746725 main.go:65:       row 25: []string{"3/30/25 16:32", "RESUME", "ensuring proper functionality"}
+2025/04/27 13:09:42.746725 main.go:65:       row 26: []string{"3/30/25 16:35", "PAUSE", "ensuring proper functionality"}
+2025/04/27 13:09:42.746725 main.go:65:       row 27: []string{"3/30/25 17:41", "STOP", "ensuring proper functionality", "96.4 minutes"}
+2025/04/27 13:09:42.746725 main.go:75:         ✅ STOP found: "ensuring proper functionality" (96.4 minutes)
+2025/04/27 13:09:42.746725 main.go:65:       row 28: []string{"3/30/25 17:41", "EXIT", "ensuring proper functionality"}
+2025/04/27 13:09:42.746725 main.go:57:   → Scanning sheet "2025-03-31"
+2025/04/27 13:09:42.746725 main.go:63:     📑 1 rows in sheet
+2025/04/27 13:09:42.746725 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.746725 main.go:57:   → Scanning sheet "2025-04-01"
+2025/04/27 13:09:42.746725 main.go:63:     📑 8 rows in sheet
+2025/04/27 13:09:42.746725 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.746725 main.go:65:       row 2: []string{"Apr-25", "START", "hlsl"}
+2025/04/27 13:09:42.746725 main.go:65:       row 3: []string{"Apr-25", "PAUSE", "hlsl"}
+2025/04/27 13:09:42.746725 main.go:65:       row 4: []string{"Apr-25", "RESUME", "hlsl"}
+2025/04/27 13:09:42.746725 main.go:65:       row 5: []string{"Apr-25", "PAUSE", "hlsl"}
+2025/04/27 13:09:42.746725 main.go:65:       row 6: []string{"Apr-25", "RESUME", "hlsl"}
+2025/04/27 13:09:42.746725 main.go:65:       row 7: []string{"Apr-25", "PAUSE", "hlsl"}
+2025/04/27 13:09:42.746725 main.go:65:       row 8: []string{"Apr-25", "RESUME", "hlsl"}
+2025/04/27 13:09:42.746725 main.go:57:   → Scanning sheet "2025-04-02"
+2025/04/27 13:09:42.753984 main.go:63:     📑 28 rows in sheet
+2025/04/27 13:09:42.753984 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.753984 main.go:65:       row 2: []string{"4/2/25 00:00", "PAUSE", "hlsl"}
+2025/04/27 13:09:42.753984 main.go:65:       row 3: []string{"4/2/25 00:05", "RESUME", "hlsl"}
+2025/04/27 13:09:42.753984 main.go:65:       row 4: []string{"4/2/25 00:51", "PAUSE", "hlsl, redoing map to be more interactable"}
+2025/04/27 13:09:42.753984 main.go:65:       row 5: []string{"4/2/25 01:52", "RESUME", "hlsl, redoing map to be more interactable"}
+2025/04/27 13:09:42.753984 main.go:65:       row 6: []string{"4/2/25 02:12", "PAUSE", "hlsl, redoing map to be more interactable"}
+2025/04/27 13:09:42.753984 main.go:65:       row 7: []string{"4/2/25 02:12", "STOP", "hlsl, redoing map to be more interactable", "244.0 minutes"}
+2025/04/27 13:09:42.753984 main.go:75:         ✅ STOP found: "hlsl, redoing map to be more interactable" (244.0 minutes)
+2025/04/27 13:09:42.753984 main.go:65:       row 8: []string{"4/2/25 02:12", "EXIT", "hlsl, redoing map to be more interactable"}
+2025/04/27 13:09:42.753984 main.go:65:       row 9: []string{"4/2/25 15:32", "EXIT"}
+2025/04/27 13:09:42.753984 main.go:65:       row 10: []string{"4/2/25 15:32", "START", "researching"}
+2025/04/27 13:09:42.753984 main.go:65:       row 11: []string{"4/2/25 15:41", "PAUSE", "researching"}
+2025/04/27 13:09:42.753984 main.go:65:       row 12: []string{"4/2/25 17:05", "RESUME", "researching"}
+2025/04/27 13:09:42.753984 main.go:65:       row 13: []string{"4/2/25 17:05", "PAUSE", "researching hlsl"}
+2025/04/27 13:09:42.753984 main.go:65:       row 14: []string{"4/2/25 17:05", "RESUME", "researching hlsl"}
+2025/04/27 13:09:42.753984 main.go:65:       row 15: []string{"4/2/25 17:10", "PAUSE", "researching hlsl"}
+2025/04/27 13:09:42.753984 main.go:65:       row 16: []string{"4/2/25 18:05", "RESUME", "researching hlsl"}
+2025/04/27 13:09:42.753984 main.go:65:       row 17: []string{"4/2/25 19:12", "PAUSE", "researching hlsl"}
+2025/04/27 13:09:42.753984 main.go:65:       row 18: []string{"4/2/25 19:36", "RESUME", "researching hlsl"}
+2025/04/27 13:09:42.753984 main.go:65:       row 19: []string{"4/2/25 19:46", "PAUSE", "researching hlsl"}
+2025/04/27 13:09:42.753984 main.go:65:       row 20: []string{"4/2/25 20:05", "RESUME", "researching hlsl"}
+2025/04/27 13:09:42.753984 main.go:65:       row 21: []string{"4/2/25 20:19", "PAUSE", "researching hlsl1"}
+2025/04/27 13:09:42.753984 main.go:65:       row 22: []string{"4/2/25 20:49", "RESUME", "researching hlsl1"}
+2025/04/27 13:09:42.753984 main.go:65:       row 23: []string{"4/2/25 21:14", "PAUSE", "researching hlsl1"}
+2025/04/27 13:09:42.753984 main.go:65:       row 24: []string{"4/2/25 21:36", "RESUME", "researching hlsl1"}
+2025/04/27 13:09:42.753984 main.go:65:       row 25: []string{"4/2/25 21:42", "PAUSE", "researching hlsl1"}
+2025/04/27 13:09:42.753984 main.go:65:       row 26: []string{"4/2/25 22:12", "RESUME", "researching hlsl1"}
+2025/04/27 13:09:42.753984 main.go:65:       row 27: []string{"4/2/25 22:50", "PAUSE", "refactoring map gen into compute shader"}
+2025/04/27 13:09:42.753984 main.go:65:       row 28: []string{"4/2/25 23:32", "RESUME", "refactoring map gen into compute shader"}
+2025/04/27 13:09:42.753984 main.go:57:   → Scanning sheet "2025-04-03"
+2025/04/27 13:09:42.753984 main.go:63:     📑 20 rows in sheet
+2025/04/27 13:09:42.753984 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.753984 main.go:65:       row 2: []string{"4/3/25 00:02", "PAUSE", "refactoring map gen into compute shader"}
+2025/04/27 13:09:42.757099 main.go:65:       row 3: []string{"4/3/25 00:04", "RESUME", "refactoring map gen into compute shader"}
+2025/04/27 13:09:42.757099 main.go:65:       row 4: []string{"4/3/25 00:42", "PAUSE", "refactoring map gen into compute shader"}
+2025/04/27 13:09:42.757099 main.go:65:       row 5: []string{"4/3/25 00:42", "STOP", "refactoring map gen into compute shader", "241.0 minutes"}
+2025/04/27 13:09:42.757099 main.go:75:         ✅ STOP found: "refactoring map gen into compute shader" (241.0 minutes)
+2025/04/27 13:09:42.757099 main.go:65:       row 6: []string{"4/3/25 01:34", "EXIT", "refactoring map gen into compute shader"}
+2025/04/27 13:09:42.757099 main.go:65:       row 7: []string{"4/3/25 13:40", "START", "fixing the sfu (media server)"}
+2025/04/27 13:09:42.757099 main.go:65:       row 8: []string{"4/3/25 13:58", "PAUSE", "fixing the sfu (media server)"}
+2025/04/27 13:09:42.757099 main.go:65:       row 9: []string{"4/3/25 17:10", "RESUME", "fixing the sfu (media server)"}
+2025/04/27 13:09:42.757099 main.go:65:       row 10: []string{"4/3/25 17:49", "PAUSE", "fixing the sfu (media server)"}
+2025/04/27 13:09:42.757099 main.go:65:       row 11: []string{"4/3/25 18:07", "RESUME", "fixing the sfu (media server)"}
+2025/04/27 13:09:42.757099 main.go:65:       row 12: []string{"4/3/25 18:31", "PAUSE", "fixing the sfu (media server)"}
+2025/04/27 13:09:42.757099 main.go:65:       row 13: []string{"4/3/25 18:42", "RESUME", "making APK from P2P"}
+2025/04/27 13:09:42.757099 main.go:65:       row 14: []string{"4/3/25 18:44", "PAUSE", "making APK from P2P"}
+2025/04/27 13:09:42.757099 main.go:65:       row 15: []string{"4/3/25 19:13", "RESUME", "researching golang apk making"}
+2025/04/27 13:09:42.757099 main.go:65:       row 16: []string{"4/3/25 20:00", "PAUSE", "researching golang apk making"}
+2025/04/27 13:09:42.757099 main.go:65:       row 17: []string{"4/3/25 21:44", "RESUME", "researching golang apk making"}
+2025/04/27 13:09:42.757099 main.go:65:       row 18: []string{"4/3/25 22:20", "PAUSE", "researching golang apk making"}
+2025/04/27 13:09:42.757099 main.go:65:       row 19: []string{"4/3/25 22:21", "RESUME", "trying to build the apk"}
+2025/04/27 13:09:42.757099 main.go:65:       row 20: []string{"4/3/25 22:42", "PAUSE", "trying to build the apk"}
+2025/04/27 13:09:42.757099 main.go:57:   → Scanning sheet "2025-04-04"
+2025/04/27 13:09:42.757099 main.go:63:     📑 5 rows in sheet
+2025/04/27 13:09:42.757099 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.757099 main.go:65:       row 2: []string{"4/4/25 01:09", "RESUME", " sdk/ndk/studio"}
+2025/04/27 13:09:42.757099 main.go:65:       row 3: []string{"4/4/25 03:09", "PAUSE", " sdk/ndk/studio"}
+2025/04/27 13:09:42.757099 main.go:65:       row 4: []string{"4/4/25 03:09", "STOP", " sdk/ndk/studio", "307.9 minutes"}
+2025/04/27 13:09:42.757099 main.go:75:         ✅ STOP found: " sdk/ndk/studio" (307.9 minutes)
+2025/04/27 13:09:42.757099 main.go:65:       row 5: []string{"4/4/25 03:09", "EXIT", " sdk/ndk/studio"}
+2025/04/27 13:09:42.763208 main.go:57:   → Scanning sheet "2025-04-05"
+2025/04/27 13:09:42.763208 main.go:63:     📑 11 rows in sheet
+2025/04/27 13:09:42.763208 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.763208 main.go:65:       row 2: []string{"4/5/25 12:04", "START", "apk build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 3: []string{"4/5/25 12:54", "PAUSE", "apk build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 4: []string{"4/5/25 13:25", "RESUME", "apk build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 5: []string{"4/5/25 13:26", "PAUSE", "apk build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 6: []string{"4/5/25 14:25", "RESUME", "apk build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 7: []string{"4/5/25 15:52", "PAUSE", "apk build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 8: []string{"4/5/25 20:31", "RESUME", "apk build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 9: []string{"4/5/25 23:02", "PAUSE", "apk build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 10: []string{"4/5/25 23:02", "STOP", "apk build", "287.4 minutes"}
+2025/04/27 13:09:42.764344 main.go:75:         ✅ STOP found: "apk build" (287.4 minutes)
+2025/04/27 13:09:42.764344 main.go:65:       row 11: []string{"4/5/25 23:15", "EXIT", "apk build"}
+2025/04/27 13:09:42.764344 main.go:57:   → Scanning sheet "2025-04-06"
+2025/04/27 13:09:42.764344 main.go:63:     📑 26 rows in sheet
+2025/04/27 13:09:42.764344 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.764344 main.go:65:       row 2: []string{"4/6/25 08:39", "START", "trying to get  apk build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 3: []string{"4/6/25 08:39", "PAUSE", "trying to get  apk build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 4: []string{"4/6/25 08:40", "RESUME", "trying to get  apk build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 5: []string{"4/6/25 08:43", "PAUSE", "trying to get  apk build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 6: []string{"4/6/25 08:43", "RESUME", "switching to linux for the build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 7: []string{"4/6/25 08:43", "PAUSE", "switching to linux for the build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 8: []string{"4/6/25 08:43", "STOP", "switching to linux for the build", "2.5 minutes"}
+2025/04/27 13:09:42.764344 main.go:75:         ✅ STOP found: "switching to linux for the build" (2.5 minutes)
+2025/04/27 13:09:42.764344 main.go:65:       row 9: []string{"4/6/25 08:43", "EXIT", "switching to linux for the build"}
+2025/04/27 13:09:42.764344 main.go:65:       row 10: []string{"4/6/25 08:45", "START", "meeting"}
+2025/04/27 13:09:42.764344 main.go:65:       row 11: []string{"4/6/25 10:26", "PAUSE", "writing gaant"}
+2025/04/27 13:09:42.764344 main.go:65:       row 12: []string{"4/6/25 10:29", "RESUME", "writing gaant"}
+2025/04/27 13:09:42.764344 main.go:65:       row 13: []string{"4/6/25 12:33", "PAUSE", "writing gaant"}
+2025/04/27 13:09:42.764344 main.go:65:       row 14: []string{"4/6/25 13:00", "RESUME", "writing gaant"}
+2025/04/27 13:09:42.764344 main.go:65:       row 15: []string{"4/6/25 13:22", "PAUSE", "writing gaant"}
+2025/04/27 13:09:42.764344 main.go:65:       row 16: []string{"4/6/25 13:23", "RESUME", "writing gaant"}
+2025/04/27 13:09:42.764344 main.go:65:       row 17: []string{"4/6/25 13:44", "PAUSE", "writing gaant"}
+2025/04/27 13:09:42.764344 main.go:65:       row 18: []string{"4/6/25 13:48", "STOP", "writing gaant", "270.9 minutes"}
+2025/04/27 13:09:42.764344 main.go:75:         ✅ STOP found: "writing gaant" (270.9 minutes)
+2025/04/27 13:09:42.770480 main.go:65:       row 19: []string{"4/6/25 13:53", "START", "writing gaant"}
+2025/04/27 13:09:42.770480 main.go:65:       row 20: []string{"4/6/25 14:13", "PAUSE", "writing gaant"}
+2025/04/27 13:09:42.770710 main.go:65:       row 21: []string{"4/6/25 14:18", "RESUME", "writing gaant"}
+2025/04/27 13:09:42.770710 main.go:65:       row 22: []string{"4/6/25 14:34", "PAUSE", "writing gaant"}
+2025/04/27 13:09:42.770710 main.go:65:       row 23: []string{"4/6/25 14:36", "RESUME", "writing gaant"}
+2025/04/27 13:09:42.770710 main.go:65:       row 24: []string{"4/6/25 15:51", "PAUSE", "writing gaant"}
+2025/04/27 13:09:42.770710 main.go:65:       row 25: []string{"4/6/25 15:51", "STOP", "gaant done", "111.3 minutes"}
+2025/04/27 13:09:42.770710 main.go:75:         ✅ STOP found: "gaant done" (111.3 minutes)
+2025/04/27 13:09:42.770710 main.go:65:       row 26: []string{"4/6/25 15:51", "EXIT", "gaant done"}
+2025/04/27 13:09:42.770710 main.go:57:   → Scanning sheet "2025-04-07"
+2025/04/27 13:09:42.772852 main.go:63:     📑 4 rows in sheet
+2025/04/27 13:09:42.772852 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.772852 main.go:65:       row 2: []string{"4/7/25 20:56", "EXIT"}
+2025/04/27 13:09:42.772852 main.go:65:       row 3: []string{"4/7/25 20:58", "START", "Meeting"}
+2025/04/27 13:09:42.772852 main.go:65:       row 4: []string{"4/7/25 21:39", "PAUSE", "Meeting"}
+2025/04/27 13:09:42.772852 main.go:57:   → Scanning sheet "2025-04-08"
+2025/04/27 13:09:42.774881 main.go:63:     📑 13 rows in sheet
+2025/04/27 13:09:42.774881 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.774881 main.go:65:       row 2: []string{"4/8/25 02:25", "STOP", "Meeting", "40.7 minutes"}
+2025/04/27 13:09:42.774881 main.go:75:         ✅ STOP found: "Meeting" (40.7 minutes)
+2025/04/27 13:09:42.774881 main.go:65:       row 3: []string{"4/8/25 02:26", "EXIT", "Meeting"}
+2025/04/27 13:09:42.774881 main.go:65:       row 4: []string{"4/8/25 15:54", "START", "apk build"}
+2025/04/27 13:09:42.774881 main.go:65:       row 5: []string{"4/8/25 17:36", "PAUSE", "apk build"}
+2025/04/27 13:09:42.774881 main.go:65:       row 6: []string{"4/8/25 18:38", "RESUME", "apk build"}
+2025/04/27 13:09:42.774881 main.go:65:       row 7: []string{"4/8/25 18:38", "PAUSE", "porting p2p to C#"}
+2025/04/27 13:09:42.774881 main.go:65:       row 8: []string{"4/8/25 18:38", "RESUME", "porting p2p to C#"}
+2025/04/27 13:09:42.774881 main.go:65:       row 9: []string{"4/8/25 18:47", "PAUSE", "porting p2p to C#"}
+2025/04/27 13:09:42.774881 main.go:65:       row 10: []string{"4/8/25 21:37", "RESUME", "porting p2p to C#"}
+2025/04/27 13:09:42.774881 main.go:65:       row 11: []string{"4/8/25 21:47", "PAUSE", "porting p2p to C#"}
+2025/04/27 13:09:42.774881 main.go:65:       row 12: []string{"4/8/25 21:54", "RESUME", "porting p2p to C#"}
+2025/04/27 13:09:42.774881 main.go:65:       row 13: []string{"4/8/25 22:34", "PAUSE", "porting p2p to C#"}
+2025/04/27 13:09:42.774881 main.go:57:   → Scanning sheet "2025-04-09"
+2025/04/27 13:09:42.774881 main.go:63:     📑 19 rows in sheet
+2025/04/27 13:09:42.774881 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.774881 main.go:65:       row 2: []string{"4/9/25 10:21", "RESUME", "porting p2p to C#"}
+2025/04/27 13:09:42.774881 main.go:65:       row 3: []string{"4/9/25 11:36", "PAUSE", "porting p2p to C#"}
+2025/04/27 13:09:42.774881 main.go:65:       row 4: []string{"4/9/25 14:25", "RESUME", "Fixing Call UI"}
+2025/04/27 13:09:42.779940 main.go:65:       row 5: []string{"4/9/25 14:59", "PAUSE", "Fixing Call UI"}
+2025/04/27 13:09:42.779940 main.go:65:       row 6: []string{"4/9/25 18:46", "RESUME", "Fixing Call UI "}
+2025/04/27 13:09:42.779940 main.go:65:       row 7: []string{"4/9/25 18:46", "PAUSE", "Fixing Call UI "}
+2025/04/27 13:09:42.779940 main.go:65:       row 8: []string{"4/9/25 18:47", "RESUME", "Checking Code Base"}
+2025/04/27 13:09:42.779940 main.go:65:       row 9: []string{"4/9/25 18:52", "PAUSE", "Checking Code Base"}
+2025/04/27 13:09:42.779940 main.go:65:       row 10: []string{"4/9/25 19:35", "RESUME", "Checking Code Base"}
+2025/04/27 13:09:42.779940 main.go:65:       row 11: []string{"4/9/25 19:38", "PAUSE", "Checking Code Base"}
+2025/04/27 13:09:42.779940 main.go:65:       row 12: []string{"4/9/25 19:48", "RESUME", "Checking Code Base"}
+2025/04/27 13:09:42.779940 main.go:65:       row 13: []string{"4/9/25 20:09", "PAUSE", "Checking Code Base"}
+2025/04/27 13:09:42.779940 main.go:65:       row 14: []string{"4/9/25 20:46", "STOP", "Checking Code Base", "297.1 minutes"}
+2025/04/27 13:09:42.779940 main.go:75:         ✅ STOP found: "Checking Code Base" (297.1 minutes)
+2025/04/27 13:09:42.779940 main.go:65:       row 15: []string{"4/9/25 20:46", "EXIT", "Checking Code Base"}
+2025/04/27 13:09:42.779940 main.go:65:       row 16: []string{"4/9/25 21:54", "START", "porting into unity"}
+2025/04/27 13:09:42.779940 main.go:65:       row 17: []string{"4/9/25 22:48", "PAUSE", "porting into unity"}
+2025/04/27 13:09:42.779940 main.go:65:       row 18: []string{"4/9/25 22:48", "RESUME", "working on apk build"}
+2025/04/27 13:09:42.779940 main.go:65:       row 19: []string{"4/9/25 23:06", "PAUSE", "working on apk build"}
+2025/04/27 13:09:42.779940 main.go:57:   → Scanning sheet "2025-04-10"
+2025/04/27 13:09:42.779940 main.go:63:     📑 32 rows in sheet
+2025/04/27 13:09:42.779940 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.779940 main.go:65:       row 2: []string{"4/10/25 00:39", "RESUME", "working on apk build"}
+2025/04/27 13:09:42.779940 main.go:65:       row 3: []string{"4/10/25 00:39", "PAUSE", "working on apk build"}
+2025/04/27 13:09:42.779940 main.go:65:       row 4: []string{"4/10/25 01:47", "RESUME", "working on apk build"}
+2025/04/27 13:09:42.779940 main.go:65:       row 5: []string{"4/10/25 02:57", "PAUSE", "working on apk build"}
+2025/04/27 13:09:42.779940 main.go:65:       row 6: []string{"4/10/25 02:57", "STOP", "working on apk build", "140.7 minutes"}
+2025/04/27 13:09:42.779940 main.go:75:         ✅ STOP found: "working on apk build" (140.7 minutes)
+2025/04/27 13:09:42.784957 main.go:65:       row 7: []string{"4/10/25 02:57", "EXIT", "working on apk build"}
+2025/04/27 13:09:42.784957 main.go:65:       row 8: []string{"4/10/25 10:52", "START", "form"}
+2025/04/27 13:09:42.785549 main.go:65:       row 9: []string{"4/10/25 11:12", "PAUSE", "form"}
+2025/04/27 13:09:42.785549 main.go:65:       row 10: []string{"4/10/25 11:12", "RESUME", "switching webrtc modules "}
+2025/04/27 13:09:42.785549 main.go:65:       row 11: []string{"4/10/25 11:30", "PAUSE", "switching webrtc modules "}
+2025/04/27 13:09:42.785549 main.go:65:       row 12: []string{"4/10/25 13:35", "RESUME", "switching webrtc modules "}
+2025/04/27 13:09:42.785549 main.go:65:       row 13: []string{"4/10/25 13:49", "PAUSE", "switching webrtc modules "}
+2025/04/27 13:09:42.785549 main.go:65:       row 14: []string{"4/10/25 13:59", "RESUME", "switching webrtc modules "}
+2025/04/27 13:09:42.785549 main.go:65:       row 15: []string{"4/10/25 14:33", "PAUSE", "switching webrtc modules "}
+2025/04/27 13:09:42.785549 main.go:65:       row 16: []string{"4/10/25 16:48", "RESUME", "switching webrtc modules "}
+2025/04/27 13:09:42.785549 main.go:65:       row 17: []string{"4/10/25 17:40", "PAUSE", "switching webrtc modules "}
+2025/04/27 13:09:42.787181 main.go:65:       row 18: []string{"4/10/25 17:57", "RESUME", "switching webrtc modules "}
+2025/04/27 13:09:42.787420 main.go:65:       row 19: []string{"4/10/25 17:59", "PAUSE", "switching webrtc modules "}
+2025/04/27 13:09:42.787420 main.go:65:       row 20: []string{"4/10/25 18:00", "RESUME", "switching webrtc modules "}
+2025/04/27 13:09:42.787420 main.go:65:       row 21: []string{"4/10/25 18:25", "PAUSE", "switching webrtc modules "}
+2025/04/27 13:09:42.787420 main.go:65:       row 22: []string{"4/10/25 18:27", "RESUME", "switching webrtc modules "}
+2025/04/27 13:09:42.787420 main.go:65:       row 23: []string{"4/10/25 18:57", "PAUSE", "switching webrtc modules "}
+2025/04/27 13:09:42.787420 main.go:65:       row 24: []string{"4/10/25 20:43", "RESUME", "switching webrtc modules "}
+2025/04/27 13:09:42.787420 main.go:65:       row 25: []string{"4/10/25 20:43", "PAUSE", "switching webrtc modules "}
+2025/04/27 13:09:42.787420 main.go:65:       row 26: []string{"4/10/25 20:44", "RESUME", "Integrating into Unity"}
+2025/04/27 13:09:42.787420 main.go:65:       row 27: []string{"4/10/25 20:53", "PAUSE", "Integrating into Unity"}
+2025/04/27 13:09:42.787420 main.go:65:       row 28: []string{"4/10/25 21:01", "RESUME", "Integrating into Unity"}
+2025/04/27 13:09:42.787420 main.go:65:       row 29: []string{"4/10/25 22:39", "PAUSE", "Integrating into Unity"}
+2025/04/27 13:09:42.789074 main.go:65:       row 30: []string{"4/10/25 23:09", "RESUME", "Integrating into Unity"}
+2025/04/27 13:09:42.789074 main.go:65:       row 31: []string{"4/10/25 23:15", "PAUSE", "Integrating into Unity"}
+2025/04/27 13:09:42.789074 main.go:65:       row 32: []string{"4/10/25 23:48", "RESUME", "Integrating into Unity"}
+2025/04/27 13:09:42.789074 main.go:57:   → Scanning sheet "2025-04-11"
+2025/04/27 13:09:42.790197 main.go:63:     📑 24 rows in sheet
+2025/04/27 13:09:42.790197 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.790197 main.go:65:       row 2: []string{"4/11/25 00:46", "PAUSE", "Integrating into Unity"}
+2025/04/27 13:09:42.790197 main.go:65:       row 3: []string{"4/11/25 02:24", "RESUME", "Integrating into Unity"}
+2025/04/27 13:09:42.790197 main.go:65:       row 4: []string{"4/11/25 02:41", "PAUSE", "Integrating into Unity"}
+2025/04/27 13:09:42.790197 main.go:65:       row 5: []string{"4/12/25 02:41", "STOP", "Integrating into Unity", "378.8 minutes"}
+2025/04/27 13:09:42.790197 main.go:75:         ✅ STOP found: "Integrating into Unity" (378.8 minutes)
+2025/04/27 13:09:42.790197 main.go:65:       row 6: []string{"4/11/25 02:42", "EXIT", "Integrating into Unity"}
+2025/04/27 13:09:42.790197 main.go:65:       row 7: []string{"4/11/25 11:30", "START", "sending mic data"}
+2025/04/27 13:09:42.792645 main.go:65:       row 8: []string{"4/11/25 12:31", "PAUSE", "sending mic data"}
+2025/04/27 13:09:42.792645 main.go:65:       row 9: []string{"4/11/25 13:49", "RESUME", "sending mic data"}
+2025/04/27 13:09:42.792645 main.go:65:       row 10: []string{"4/11/25 14:14", "PAUSE", "sending mic data"}
+2025/04/27 13:09:42.792645 main.go:65:       row 11: []string{"4/11/25 14:46", "RESUME", "sending mic data"}
+2025/04/27 13:09:42.792645 main.go:65:       row 12: []string{"4/11/25 15:54", "PAUSE", "sending mic data"}
+2025/04/27 13:09:42.792645 main.go:65:       row 13: []string{"4/11/25 16:57", "RESUME", "sending mic data"}
+2025/04/27 13:09:42.792645 main.go:65:       row 14: []string{"4/11/25 17:37", "PAUSE", "sending mic data"}
+2025/04/27 13:09:42.792645 main.go:65:       row 15: []string{"4/11/25 18:27", "RESUME", "Setting up UI buttons"}
+2025/04/27 13:09:42.792645 main.go:65:       row 16: []string{"4/11/25 18:41", "PAUSE", "Setting up UI buttons"}
+2025/04/27 13:09:42.792645 main.go:65:       row 17: []string{"4/11/25 18:48", "RESUME", "Setting up UI buttons"}
+2025/04/27 13:09:42.792645 main.go:65:       row 18: []string{"4/11/25 19:28", "PAUSE", "Setting up UI buttons"}
+2025/04/27 13:09:42.792645 main.go:65:       row 19: []string{"4/11/25 20:14", "RESUME", "Setting up UI buttons"}
+2025/04/27 13:09:42.792645 main.go:65:       row 20: []string{"4/11/25 20:38", "PAUSE", "Setting up UI buttons"}
+2025/04/27 13:09:42.795150 main.go:65:       row 21: []string{"4/11/25 20:40", "RESUME", "fixing misplaced scripts"}
+2025/04/27 13:09:42.795150 main.go:65:       row 22: []string{"4/11/25 20:44", "PAUSE", "fixing misplaced scripts"}
+2025/04/27 13:09:42.795695 main.go:65:       row 23: []string{"4/11/25 20:51", "RESUME", "fixing misplaced scripts"}
+2025/04/27 13:09:42.795695 main.go:65:       row 24: []string{"4/11/25 21:16", "PAUSE", "fixing misplaced scripts"}
+2025/04/27 13:09:42.796219 main.go:57:   → Scanning sheet "2025-04-12"
+2025/04/27 13:09:42.798131 main.go:63:     📑 31 rows in sheet
+2025/04/27 13:09:42.798281 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.798281 main.go:65:       row 2: []string{"4/12/25 00:53", "RESUME", "fixing misplaced scripts"}
+2025/04/27 13:09:42.798281 main.go:65:       row 3: []string{"4/12/25 00:56", "PAUSE", "fixing misplaced scripts"}
+2025/04/27 13:09:42.798281 main.go:65:       row 4: []string{"4/12/25 01:20", "RESUME", "fixing misplaced scripts"}
+2025/04/27 13:09:42.798281 main.go:65:       row 5: []string{"4/12/25 01:20", "PAUSE", "fixing misplaced scripts"}
+2025/04/27 13:09:42.798952 main.go:65:       row 6: []string{"4/12/25 02:15", "RESUME", "fixing misplaced scripts"}
+2025/04/27 13:09:42.798952 main.go:65:       row 7: []string{"4/12/25 02:43", "PAUSE", "Set Up Done. Debugging Remain"}
+2025/04/27 13:09:42.798952 main.go:65:       row 8: []string{"4/12/25 02:43", "RESUME", "Set Up Done. Debugging Remain"}
+2025/04/27 13:09:42.798952 main.go:65:       row 9: []string{"4/12/25 02:54", "PAUSE", "Set Up Done. Debugging Remain"}
+2025/04/27 13:09:42.799620 main.go:65:       row 10: []string{"4/12/25 02:54", "STOP", "Set Up Done. Debugging Remain", "340.5 minutes"}
+2025/04/27 13:09:42.799620 main.go:75:         ✅ STOP found: "Set Up Done. Debugging Remain" (340.5 minutes)
+2025/04/27 13:09:42.799620 main.go:65:       row 11: []string{"4/12/25 11:57", "START", "testing + debugging"}
+2025/04/27 13:09:42.800164 main.go:65:       row 12: []string{"4/12/25 12:27", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.800164 main.go:65:       row 13: []string{"4/12/25 12:45", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.800164 main.go:65:       row 14: []string{"4/12/25 12:49", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.800164 main.go:65:       row 15: []string{"4/12/25 13:57", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.800829 main.go:65:       row 16: []string{"4/12/25 14:56", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.800829 main.go:65:       row 17: []string{"4/12/25 15:28", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.800829 main.go:65:       row 18: []string{"4/12/25 15:29", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.800829 main.go:65:       row 19: []string{"4/12/25 16:25", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.801490 main.go:65:       row 20: []string{"4/12/25 16:52", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.801490 main.go:65:       row 21: []string{"4/12/25 17:06", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.801490 main.go:65:       row 22: []string{"4/12/25 17:51", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.802046 main.go:65:       row 23: []string{"4/12/25 17:52", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.802261 main.go:65:       row 24: []string{"4/12/25 18:12", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.802402 main.go:65:       row 25: []string{"4/12/25 18:52", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.802570 main.go:65:       row 26: []string{"4/12/25 19:12", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.802646 main.go:65:       row 27: []string{"4/12/25 19:26", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.802646 main.go:65:       row 28: []string{"4/12/25 19:40", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.802646 main.go:65:       row 29: []string{"4/12/25 22:15", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.803152 main.go:65:       row 30: []string{"4/12/25 22:45", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.803152 main.go:65:       row 31: []string{"4/12/25 23:26", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.803669 main.go:57:   → Scanning sheet "2025-04-13"
+2025/04/27 13:09:42.805941 main.go:63:     📑 44 rows in sheet
+2025/04/27 13:09:42.806556 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.806556 main.go:65:       row 2: []string{"4/13/25 00:17", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.806556 main.go:65:       row 3: []string{"4/13/25 00:28", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.806556 main.go:65:       row 4: []string{"4/13/25 00:34", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.806556 main.go:65:       row 5: []string{"4/13/25 01:27", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.807171 main.go:65:       row 6: []string{"4/13/25 01:46", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.807171 main.go:65:       row 7: []string{"4/13/25 02:07", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.807171 main.go:65:       row 8: []string{"4/13/25 02:16", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.807742 main.go:65:       row 9: []string{"4/13/25 02:32", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.807821 main.go:65:       row 10: []string{"4/13/25 03:36", "PAUSE", "testing + debugging"}
+2025/04/27 13:09:42.807821 main.go:65:       row 11: []string{"4/13/25 03:59", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.807821 main.go:65:       row 12: []string{"4/13/25 04:03", "PAUSE", "testing + debugging => got gathering compleme"}
+2025/04/27 13:09:42.808341 main.go:65:       row 13: []string{"4/13/25 04:03", "RESUME", "testing + debugging"}
+2025/04/27 13:09:42.808341 main.go:65:       row 14: []string{"4/13/25 04:49", "PAUSE", "Checking Mic Functionality"}
+2025/04/27 13:09:42.808341 main.go:65:       row 15: []string{"4/13/25 04:49", "RESUME", "Checking Mic Functionality"}
+2025/04/27 13:09:42.808341 main.go:65:       row 16: []string{"4/13/25 05:06", "PAUSE", "Checking Mic Functionality"}
+2025/04/27 13:09:42.808887 main.go:65:       row 17: []string{"4/13/25 05:12", "RESUME", "Checking Mic Functionality"}
+2025/04/27 13:09:42.808887 main.go:65:       row 18: []string{"4/13/25 05:13", "STOP", "Checking Mic Functionality", "464.6 minutes"}
+2025/04/27 13:09:42.808887 main.go:75:         ✅ STOP found: "Checking Mic Functionality" (464.6 minutes)
+2025/04/27 13:09:42.808887 main.go:65:       row 19: []string{"4/13/25 05:14", "EXIT", "Checking Mic Functionality"}
+2025/04/27 13:09:42.809414 main.go:65:       row 20: []string{"4/13/25 13:00", "START", "working on audio Streaming"}
+2025/04/27 13:09:42.809414 main.go:65:       row 21: []string{"4/13/25 13:44", "PAUSE", "working on audio Streaming"}
+2025/04/27 13:09:42.809414 main.go:65:       row 22: []string{"4/13/25 14:05", "RESUME", "working on audio Streaming"}
+2025/04/27 13:09:42.809414 main.go:65:       row 23: []string{"4/13/25 14:27", "PAUSE", "working on audio Streaming"}
+2025/04/27 13:09:42.809945 main.go:65:       row 24: []string{"4/13/25 14:27", "STOP", "working on audio Streaming", "65.6 minutes"}
+2025/04/27 13:09:42.810073 main.go:75:         ✅ STOP found: "working on audio Streaming" (65.6 minutes)
+2025/04/27 13:09:42.810073 main.go:65:       row 25: []string{"4/13/25 14:27", "EXIT", "working on audio Streaming"}
+2025/04/27 13:09:42.810073 main.go:65:       row 26: []string{"4/13/25 17:39", "START", "Asynchronizing awaitable tasks"}
+2025/04/27 13:09:42.810073 main.go:65:       row 27: []string{"4/13/25 18:06", "PAUSE", "Asynchronizing awaitable tasks"}
+2025/04/27 13:09:42.810073 main.go:65:       row 28: []string{"4/13/25 18:16", "RESUME", "Asynchronizing awaitable tasks"}
+2025/04/27 13:09:42.810577 main.go:65:       row 29: []string{"4/13/25 18:35", "PAUSE", "Asynchronizing awaitable tasks"}
+2025/04/27 13:09:42.810703 main.go:65:       row 30: []string{"4/13/25 18:44", "RESUME", "Asynchronizing awaitable tasks"}
+2025/04/27 13:09:42.810703 main.go:65:       row 31: []string{"4/13/25 18:47", "PAUSE", "Asynchronizing awaitable tasks"}
+2025/04/27 13:09:42.810703 main.go:65:       row 32: []string{"4/13/25 19:18", "RESUME", "Asynchronizing awaitable tasks"}
+2025/04/27 13:09:42.810703 main.go:65:       row 33: []string{"4/13/25 19:54", "PAUSE", "Asynchronizing awaitable tasks"}
+2025/04/27 13:09:42.811208 main.go:65:       row 34: []string{"4/13/25 20:20", "RESUME", "Asynchronizing awaitable tasks"}
+2025/04/27 13:09:42.811208 main.go:65:       row 35: []string{"4/13/25 20:51", "PAUSE", "Asynchronizing awaitable tasks"}
+2025/04/27 13:09:42.811208 main.go:65:       row 36: []string{"4/13/25 20:51", "RESUME", "Debugging Connection Setting"}
+2025/04/27 13:09:42.811208 main.go:65:       row 37: []string{"4/13/25 21:19", "PAUSE", "Debugging Connection Setting"}
+2025/04/27 13:09:42.811732 main.go:65:       row 38: []string{"4/13/25 22:04", "RESUME", "Debugging Connection Setting"}
+2025/04/27 13:09:42.811732 main.go:65:       row 39: []string{"4/13/25 22:07", "PAUSE", "Debugging Connection Setting"}
+2025/04/27 13:09:42.811732 main.go:65:       row 40: []string{"4/13/25 22:11", "RESUME", "Debugging Connection Setting"}
+2025/04/27 13:09:42.811732 main.go:65:       row 41: []string{"4/13/25 22:25", "PAUSE", "Debugging Connection Setting"}
+2025/04/27 13:09:42.812260 main.go:65:       row 42: []string{"4/13/25 23:00", "RESUME", "Debugging Connection Setting"}
+2025/04/27 13:09:42.812260 main.go:65:       row 43: []string{"4/13/25 23:12", "PAUSE", "Debugging Connection Setting"}
+2025/04/27 13:09:42.812260 main.go:65:       row 44: []string{"4/13/25 23:35", "RESUME", "Debugging Connection Setting"}
+2025/04/27 13:09:42.812260 main.go:57:   → Scanning sheet "2025-04-14"
+2025/04/27 13:09:42.813506 main.go:63:     📑 24 rows in sheet
+2025/04/27 13:09:42.814050 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.814138 main.go:65:       row 2: []string{"4/14/25 00:02", "PAUSE", "Debugging Connection Setting"}
+2025/04/27 13:09:42.814138 main.go:65:       row 3: []string{"4/14/25 03:04", "STOP", "Debugging Connection Setting", "196.9 minutes"}
+2025/04/27 13:09:42.814138 main.go:75:         ✅ STOP found: "Debugging Connection Setting" (196.9 minutes)
+2025/04/27 13:09:42.814138 main.go:65:       row 4: []string{"4/14/25 15:47", "START"}
+2025/04/27 13:09:42.814645 main.go:65:       row 5: []string{"4/14/25 15:52", "PAUSE"}
+2025/04/27 13:09:42.814645 main.go:65:       row 6: []string{"4/14/25 15:52", "RESUME", "Connection QA"}
+2025/04/27 13:09:42.814645 main.go:65:       row 7: []string{"4/14/25 16:10", "PAUSE", "Connection QA"}
+2025/04/27 13:09:42.815170 main.go:65:       row 8: []string{"4/14/25 18:52", "RESUME", "Connection QA"}
+2025/04/27 13:09:42.815170 main.go:65:       row 9: []string{"4/14/25 19:11", "PAUSE", "Connection QA"}
+2025/04/27 13:09:42.815170 main.go:65:       row 10: []string{"4/14/25 19:13", "RESUME", "Connection QA"}
+2025/04/27 13:09:42.815170 main.go:65:       row 11: []string{"4/14/25 19:25", "PAUSE", "Connection QA"}
+2025/04/27 13:09:42.815695 main.go:65:       row 12: []string{"4/14/25 20:07", "RESUME", "Connection QA"}
+2025/04/27 13:09:42.815695 main.go:65:       row 13: []string{"4/14/25 20:30", "PAUSE", "Connection QA"}
+2025/04/27 13:09:42.815695 main.go:65:       row 14: []string{"4/14/25 20:46", "RESUME", "Connection QA"}
+2025/04/27 13:09:42.815695 main.go:65:       row 15: []string{"4/14/25 21:07", "PAUSE", "Connection QA"}
+2025/04/27 13:09:42.815695 main.go:65:       row 16: []string{"4/14/25 21:12", "RESUME", "Voice Debugging"}
+2025/04/27 13:09:42.816323 main.go:65:       row 17: []string{"4/14/25 21:16", "PAUSE", "Voice Debugging"}
+2025/04/27 13:09:42.816323 main.go:65:       row 18: []string{"4/14/25 21:23", "RESUME", "Voice Debugging"}
+2025/04/27 13:09:42.816323 main.go:65:       row 19: []string{"4/14/25 21:49", "PAUSE", "Voice Debugging"}
+2025/04/27 13:09:42.816323 main.go:65:       row 20: []string{"4/14/25 22:06", "RESUME", "Voice Debugging"}
+2025/04/27 13:09:42.816844 main.go:65:       row 21: []string{"4/14/25 22:06", "PAUSE", "Voice Debugging"}
+2025/04/27 13:09:42.816844 main.go:65:       row 22: []string{"4/14/25 22:39", "RESUME", "Voice Debugging"}
+2025/04/27 13:09:42.816844 main.go:65:       row 23: []string{"4/14/25 23:22", "PAUSE", "Voice Debugging"}
+2025/04/27 13:09:42.816844 main.go:65:       row 24: []string{"4/14/25 23:42", "RESUME", "Voice Debugging"}
+2025/04/27 13:09:42.817400 main.go:57:   → Scanning sheet "2025-04-15"
+2025/04/27 13:09:42.819438 main.go:63:     📑 37 rows in sheet
+2025/04/27 13:09:42.819438 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.819942 main.go:65:       row 2: []string{"4/15/25 00:03", "PAUSE", "Voice Debugging"}
+2025/04/27 13:09:42.819942 main.go:65:       row 3: []string{"4/15/25 00:39", "RESUME", "Voice Debugging"}
+2025/04/27 13:09:42.819942 main.go:65:       row 4: []string{"4/15/25 00:51", "PAUSE", "Voice Debugging"}
+2025/04/27 13:09:42.819942 main.go:65:       row 5: []string{"4/15/25 00:55", "RESUME", "Voice Debugging"}
+2025/04/27 13:09:42.820494 main.go:65:       row 6: []string{"4/15/25 01:01", "PAUSE", "Voice Debugging"}
+2025/04/27 13:09:42.820494 main.go:65:       row 7: []string{"4/15/25 01:20", "RESUME", "Voice Debugging"}
+2025/04/27 13:09:42.820494 main.go:65:       row 8: []string{"4/15/25 01:50", "PAUSE", "Voice Debugging"}
+2025/04/27 13:09:42.820494 main.go:65:       row 9: []string{"4/15/25 02:30", "RESUME", "Voice Debugging"}
+2025/04/27 13:09:42.820494 main.go:65:       row 10: []string{"4/15/25 02:31", "PAUSE", "Voice Debugging"}
+2025/04/27 13:09:42.820494 main.go:65:       row 11: []string{"4/15/25 03:31", "RESUME", "Voice Debugging"}
+2025/04/27 13:09:42.820494 main.go:65:       row 12: []string{"4/15/25 03:31", "PAUSE", "Voice Debugging"}
+2025/04/27 13:09:42.820494 main.go:65:       row 13: []string{"4/15/25 03:31", "RESUME", "Connection Debugging"}
+2025/04/27 13:09:42.821011 main.go:65:       row 14: []string{"4/15/25 04:12", "PAUSE", "Connection Debugging"}
+2025/04/27 13:09:42.821011 main.go:65:       row 15: []string{"4/15/25 04:12", "STOP", "Connection Debugging", "282.5 minutes"}
+2025/04/27 13:09:42.821011 main.go:75:         ✅ STOP found: "Connection Debugging" (282.5 minutes)
+2025/04/27 13:09:42.821553 main.go:65:       row 16: []string{"4/15/25 04:12", "EXIT", "Connection Debugging"}
+2025/04/27 13:09:42.821553 main.go:65:       row 17: []string{"4/15/25 16:08", "START", "Ice candidate problem solving"}
+2025/04/27 13:09:42.821553 main.go:65:       row 18: []string{"4/15/25 17:43", "PAUSE", "Ice candidate problem solving"}
+2025/04/27 13:09:42.821553 main.go:65:       row 19: []string{"4/15/25 17:52", "RESUME", "Ice candidate problem solving"}
+2025/04/27 13:09:42.822081 main.go:65:       row 20: []string{"4/15/25 18:12", "PAUSE", "Connections fixed?!"}
+2025/04/27 13:09:42.822081 main.go:65:       row 21: []string{"4/15/25 18:12", "RESUME", "checking audio transmittion"}
+2025/04/27 13:09:42.822081 main.go:65:       row 22: []string{"4/15/25 18:43", "PAUSE", "checking audio transmittion"}
+2025/04/27 13:09:42.822081 main.go:65:       row 23: []string{"4/15/25 20:03", "RESUME", "checking audio transmittion"}
+2025/04/27 13:09:42.822081 main.go:65:       row 24: []string{"4/15/25 20:12", "PAUSE", "checking audio transmittion"}
+2025/04/27 13:09:42.822605 main.go:65:       row 25: []string{"4/15/25 20:19", "RESUME", "checking audio transmittion"}
+2025/04/27 13:09:42.822605 main.go:65:       row 26: []string{"4/15/25 20:21", "PAUSE", "checking audio transmittion"}
+2025/04/27 13:09:42.822605 main.go:65:       row 27: []string{"4/15/25 21:07", "RESUME", "checking audio transmittion"}
+2025/04/27 13:09:42.822605 main.go:65:       row 28: []string{"4/15/25 21:18", "PAUSE", "checking audio transmittion"}
+2025/04/27 13:09:42.822605 main.go:65:       row 29: []string{"4/15/25 21:20", "RESUME", "checking audio transmittion"}
+2025/04/27 13:09:42.822605 main.go:65:       row 30: []string{"4/15/25 22:56", "PAUSE", "checking audio transmittion"}
+2025/04/27 13:09:42.822605 main.go:65:       row 31: []string{"4/15/25 22:56", "STOP", "checking audio transmittion", "262.3 minutes"}
+2025/04/27 13:09:42.823152 main.go:75:         ✅ STOP found: "checking audio transmittion" (262.3 minutes)
+2025/04/27 13:09:42.823152 main.go:65:       row 32: []string{"4/15/25 22:59", "START", "Mobile Build"}
+2025/04/27 13:09:42.823152 main.go:65:       row 33: []string{"4/15/25 23:07", "PAUSE", "Mobile Build-"}
+2025/04/27 13:09:42.823152 main.go:65:       row 34: []string{"4/15/25 23:23", "RESUME", "Mobile Build-"}
+2025/04/27 13:09:42.823708 main.go:65:       row 35: []string{"4/15/25 23:42", "PAUSE", "Mobile Build-"}
+2025/04/27 13:09:42.823708 main.go:65:       row 36: []string{"4/15/25 23:48", "RESUME", "Mobile Build"}
+2025/04/27 13:09:42.823708 main.go:65:       row 37: []string{"4/15/25 23:54", "PAUSE", "Mobile Build"}
+2025/04/27 13:09:42.823708 main.go:57:   → Scanning sheet "2025-04-16"
+2025/04/27 13:09:42.824959 main.go:63:     📑 21 rows in sheet
+2025/04/27 13:09:42.824959 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.825479 main.go:65:       row 2: []string{"4/16/25 00:17", "STOP", "Mobile Build", "31.6 minutes"}
+2025/04/27 13:09:42.825479 main.go:75:         ✅ STOP found: "Mobile Build" (31.6 minutes)
+2025/04/27 13:09:42.825479 main.go:65:       row 3: []string{"4/16/25 00:17", "EXIT", "Mobile Build"}
+2025/04/27 13:09:42.825479 main.go:65:       row 4: []string{"4/16/25 15:16", "START", "Preping report"}
+2025/04/27 13:09:42.825479 main.go:65:       row 5: []string{"4/16/25 15:52", "PAUSE", "Preping report"}
+2025/04/27 13:09:42.825479 main.go:65:       row 6: []string{"4/16/25 16:00", "RESUME", "Preping report"}
+2025/04/27 13:09:42.825479 main.go:65:       row 7: []string{"4/16/25 16:26", "PAUSE", "Preping report"}
+2025/04/27 13:09:42.826541 main.go:65:       row 8: []string{"4/16/25 16:38", "RESUME", "Preping report"}
+2025/04/27 13:09:42.826541 main.go:65:       row 9: []string{"4/16/25 16:52", "PAUSE", "Preping report"}
+2025/04/27 13:09:42.826541 main.go:65:       row 10: []string{"4/16/25 17:15", "RESUME", "Preping report"}
+2025/04/27 13:09:42.826541 main.go:65:       row 11: []string{"4/16/25 17:58", "PAUSE", "Preping report"}
+2025/04/27 13:09:42.826541 main.go:65:       row 12: []string{"4/16/25 18:02", "RESUME", "Preping report"}
+2025/04/27 13:09:42.826541 main.go:65:       row 13: []string{"4/16/25 18:08", "PAUSE", "Preping report"}
+2025/04/27 13:09:42.826541 main.go:65:       row 14: []string{"4/16/25 18:14", "RESUME", "Preping report"}
+2025/04/27 13:09:42.826541 main.go:65:       row 15: []string{"4/16/25 18:28", "PAUSE", "Preping report"}
+2025/04/27 13:09:42.826541 main.go:65:       row 16: []string{"4/16/25 20:01", "RESUME", "Preping report"}
+2025/04/27 13:09:42.826541 main.go:65:       row 17: []string{"4/16/25 20:51", "PAUSE", "Preping report"}
+2025/04/27 13:09:42.826541 main.go:65:       row 18: []string{"4/16/25 20:54", "RESUME", "Preping report"}
+2025/04/27 13:09:42.828103 main.go:65:       row 19: []string{"4/16/25 20:54", "PAUSE", "Preping report"}
+2025/04/27 13:09:42.828103 main.go:65:       row 20: []string{"4/16/25 20:54", "RESUME", "Meeting"}
+2025/04/27 13:09:42.828103 main.go:65:       row 21: []string{"4/16/25 21:16", "PAUSE", "Meeting"}
+2025/04/27 13:09:42.828103 main.go:57:   → Scanning sheet "2025-04-17"
+2025/04/27 13:09:42.829655 main.go:63:     📑 31 rows in sheet
+2025/04/27 13:09:42.829655 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.829655 main.go:65:       row 2: []string{"4/17/25 03:29", "RESUME", "Meeting"}
+2025/04/27 13:09:42.829655 main.go:65:       row 3: []string{"4/17/25 03:39", "PAUSE", "Meeting"}
+2025/04/27 13:09:42.829655 main.go:65:       row 4: []string{"4/17/25 03:40", "RESUME", "Meeting"}
+2025/04/27 13:09:42.829655 main.go:65:       row 5: []string{"4/17/25 03:43", "PAUSE", "Meeting"}
+2025/04/27 13:09:42.829655 main.go:65:       row 6: []string{"4/17/25 03:43", "RESUME", "building for mobile"}
+2025/04/27 13:09:42.829655 main.go:65:       row 7: []string{"4/17/25 04:33", "PAUSE", "building for mobile"}
+2025/04/27 13:09:42.831181 main.go:65:       row 8: []string{"4/17/25 04:33", "STOP", "building for mobile", "274.1 minutes"}
+2025/04/27 13:09:42.831308 main.go:75:         ✅ STOP found: "building for mobile" (274.1 minutes)
+2025/04/27 13:09:42.831308 main.go:65:       row 9: []string{"4/17/25 04:33", "EXIT", "building for mobile"}
+2025/04/27 13:09:42.831308 main.go:65:       row 10: []string{"4/17/25 14:45", "START", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 11: []string{"4/17/25 14:58", "PAUSE", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 12: []string{"4/17/25 15:21", "RESUME", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 13: []string{"4/17/25 15:27", "PAUSE", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 14: []string{"4/17/25 15:32", "RESUME", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 15: []string{"4/17/25 15:34", "PAUSE", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 16: []string{"4/17/25 17:16", "RESUME", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 17: []string{"4/17/25 17:19", "PAUSE", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 18: []string{"4/17/25 17:24", "RESUME", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 19: []string{"4/17/25 18:29", "PAUSE", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 20: []string{"4/17/25 18:34", "RESUME", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 21: []string{"4/17/25 19:00", "PAUSE", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 22: []string{"4/17/25 19:09", "RESUME", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 23: []string{"4/17/25 20:49", "PAUSE", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 24: []string{"4/17/25 22:14", "RESUME", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 25: []string{"4/17/25 22:18", "PAUSE", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 26: []string{"4/17/25 22:21", "RESUME", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 27: []string{"4/17/25 22:27", "PAUSE", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 28: []string{"4/17/25 22:39", "RESUME", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 29: []string{"4/17/25 23:03", "PAUSE", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 30: []string{"4/17/25 23:18", "RESUME", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 31: []string{"4/17/25 23:26", "PAUSE", "building to android"}
+2025/04/27 13:09:42.831308 main.go:57:   → Scanning sheet "2025-04-18"
+2025/04/27 13:09:42.831308 main.go:63:     📑 31 rows in sheet
+2025/04/27 13:09:42.831308 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.831308 main.go:65:       row 2: []string{"4/18/25 05:02", "RESUME", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 3: []string{"4/18/25 05:16", "PAUSE", "building to android"}
+2025/04/27 13:09:42.831308 main.go:65:       row 4: []string{"4/18/25 05:22", "RESUME", "building to android"}
+2025/04/27 13:09:42.835820 main.go:65:       row 5: []string{"4/18/25 06:05", "PAUSE", "building to android"}
+2025/04/27 13:09:42.835820 main.go:65:       row 6: []string{"4/18/25 07:30", "STOP", "building to android", "309.6 minutes"}
+2025/04/27 13:09:42.835820 main.go:75:         ✅ STOP found: "building to android" (309.6 minutes)
+2025/04/27 13:09:42.835820 main.go:65:       row 7: []string{"4/18/25 07:30", "EXIT", "building to android"}
+2025/04/27 13:09:42.835820 main.go:65:       row 8: []string{"4/18/25 15:54", "START", "gozaresh kar"}
+2025/04/27 13:09:42.835820 main.go:65:       row 9: []string{"4/18/25 16:27", "PAUSE", "gozaresh kar"}
+2025/04/27 13:09:42.835820 main.go:65:       row 10: []string{"4/18/25 16:32", "RESUME", "gozaresh kar"}
+2025/04/27 13:09:42.835820 main.go:65:       row 11: []string{"4/18/25 16:47", "PAUSE", "gozaresh kar"}
+2025/04/27 13:09:42.835820 main.go:65:       row 12: []string{"4/18/25 16:53", "RESUME", "gozaresh kar"}
+2025/04/27 13:09:42.835820 main.go:65:       row 13: []string{"4/18/25 16:57", "PAUSE", "gozaresh kar"}
+2025/04/27 13:09:42.835820 main.go:65:       row 14: []string{"4/18/25 17:14", "RESUME", "gozaresh kar"}
+2025/04/27 13:09:42.836524 main.go:65:       row 15: []string{"4/18/25 17:22", "PAUSE", "gozaresh kar"}
+2025/04/27 13:09:42.836524 main.go:65:       row 16: []string{"4/18/25 17:32", "RESUME", "gozaresh kar"}
+2025/04/27 13:09:42.836524 main.go:65:       row 17: []string{"4/18/25 17:37", "PAUSE", "gozaresh kar"}
+2025/04/27 13:09:42.836524 main.go:65:       row 18: []string{"4/18/25 18:00", "RESUME", "gozaresh kar"}
+2025/04/27 13:09:42.836524 main.go:65:       row 19: []string{"4/18/25 18:02", "PAUSE", "gozaresh kar"}
+2025/04/27 13:09:42.836524 main.go:65:       row 20: []string{"4/18/25 18:03", "RESUME", "gozaresh kar"}
+2025/04/27 13:09:42.837049 main.go:65:       row 21: []string{"4/18/25 18:03", "PAUSE", "gozaresh kar"}
+2025/04/27 13:09:42.837049 main.go:65:       row 22: []string{"4/18/25 19:41", "RESUME", "gozaresh kar"}
+2025/04/27 13:09:42.837136 main.go:65:       row 23: []string{"4/18/25 20:43", "PAUSE", "gozaresh kar"}
+2025/04/27 13:09:42.837136 main.go:65:       row 24: []string{"4/18/25 20:48", "RESUME", "gozaresh kar"}
+2025/04/27 13:09:42.837136 main.go:65:       row 25: []string{"4/18/25 20:48", "PAUSE", "gozaresh kar"}
+2025/04/27 13:09:42.837136 main.go:65:       row 26: []string{"4/18/25 20:55", "RESUME", "gozaresh kar"}
+2025/04/27 13:09:42.837136 main.go:65:       row 27: []string{"4/18/25 21:07", "PAUSE", "gozaresh kar"}
+2025/04/27 13:09:42.837660 main.go:65:       row 28: []string{"4/18/25 21:13", "RESUME", "gozaresh kar"}
+2025/04/27 13:09:42.837660 main.go:65:       row 29: []string{"4/18/25 21:42", "PAUSE", "gozaresh kar"}
+2025/04/27 13:09:42.837660 main.go:65:       row 30: []string{"4/18/25 21:42", "RESUME", "debugging mic"}
+2025/04/27 13:09:42.837660 main.go:65:       row 31: []string{"4/18/25 21:50", "PAUSE", "debugging mic"}
+2025/04/27 13:09:42.837660 main.go:57:   → Scanning sheet "2025-04-19"
+2025/04/27 13:09:42.837660 main.go:63:     📑 32 rows in sheet
+2025/04/27 13:09:42.839935 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.839935 main.go:65:       row 2: []string{"4/19/25 00:36", "RESUME", "debugging mic"}
+2025/04/27 13:09:42.839935 main.go:65:       row 3: []string{"4/19/25 00:41", "PAUSE", "debugging mic"}
+2025/04/27 13:09:42.839935 main.go:65:       row 4: []string{"4/19/25 00:42", "RESUME", "debugging mic"}
+2025/04/27 13:09:42.839935 main.go:65:       row 5: []string{"4/18/25 01:05", "STOP", "debugging mic", "207 minutes"}
+2025/04/27 13:09:42.839935 main.go:75:         ✅ STOP found: "debugging mic" (207 minutes)
+2025/04/27 13:09:42.839935 main.go:65:       row 6: []string{"4/19/25 01:05", "EXIT"}
+2025/04/27 13:09:42.839935 main.go:65:       row 7: []string{"4/19/25 01:05", "START", "mic config"}
+2025/04/27 13:09:42.839935 main.go:65:       row 8: []string{"4/19/25 01:50", "RESUME", "mic config"}
+2025/04/27 13:09:42.839935 main.go:65:       row 9: []string{"4/19/25 02:08", "PAUSE", "mic config"}
+2025/04/27 13:09:42.839935 main.go:65:       row 10: []string{"4/19/25 04:09", "RESUME", "mic config"}
+2025/04/27 13:09:42.839935 main.go:65:       row 11: []string{"4/19/25 04:21", "PAUSE", "mic config"}
+2025/04/27 13:09:42.839935 main.go:65:       row 12: []string{"4/19/25 04:34", "RESUME", "mic config"}
+2025/04/27 13:09:42.839935 main.go:65:       row 13: []string{"4/19/25 04:36", "PAUSE", "mic config"}
+2025/04/27 13:09:42.839935 main.go:65:       row 14: []string{"4/19/25 06:06", "STOP", "mic config", "56.7 minutes"}
+2025/04/27 13:09:42.839935 main.go:75:         ✅ STOP found: "mic config" (56.7 minutes)
+2025/04/27 13:09:42.839935 main.go:65:       row 15: []string{"4/19/25 13:32", "START", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 16: []string{"4/19/25 13:55", "PAUSE", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 17: []string{"4/19/25 14:20", "RESUME", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 18: []string{"4/19/25 15:02", "PAUSE", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 19: []string{"4/19/25 16:12", "RESUME", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 20: []string{"4/19/25 16:53", "PAUSE", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 21: []string{"4/19/25 17:09", "RESUME", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 22: []string{"4/19/25 17:14", "PAUSE", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 23: []string{"4/19/25 17:17", "RESUME", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 24: []string{"4/19/25 17:19", "PAUSE", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 25: []string{"4/19/25 17:34", "RESUME", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 26: []string{"4/19/25 17:55", "PAUSE", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 27: []string{"4/19/25 18:03", "RESUME", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 28: []string{"4/19/25 18:48", "PAUSE", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 29: []string{"4/19/25 20:23", "RESUME", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 30: []string{"4/19/25 20:39", "PAUSE", "mic streaming problem"}
+2025/04/27 13:09:42.839935 main.go:65:       row 31: []string{"4/19/25 20:59", "RESUME", "meeting"}
+2025/04/27 13:09:42.839935 main.go:65:       row 32: []string{"4/19/25 21:58", "PAUSE", "meeting"}
+2025/04/27 13:09:42.839935 main.go:57:   → Scanning sheet "2025-04-20"
+2025/04/27 13:09:42.839935 main.go:63:     📑 20 rows in sheet
+2025/04/27 13:09:42.839935 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.839935 main.go:65:       row 2: []string{"4/20/25 04:49", "STOP", "meeting", "252.9 minutes"}
+2025/04/27 13:09:42.839935 main.go:75:         ✅ STOP found: "meeting" (252.9 minutes)
+2025/04/27 13:09:42.839935 main.go:65:       row 3: []string{"4/20/25 17:57", "START", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 4: []string{"4/20/25 18:09", "PAUSE", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 5: []string{"4/20/25 18:12", "RESUME", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 6: []string{"4/20/25 18:43", "PAUSE", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 7: []string{"4/20/25 18:58", "RESUME", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 8: []string{"4/20/25 19:29", "PAUSE", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 9: []string{"4/20/25 20:20", "RESUME", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 10: []string{"4/20/25 20:35", "PAUSE", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 11: []string{"4/20/25 20:56", "RESUME", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 12: []string{"4/20/25 21:05", "PAUSE", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 13: []string{"4/20/25 21:40", "RESUME", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 14: []string{"4/20/25 21:44", "PAUSE", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 15: []string{"4/20/25 21:54", "RESUME", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 16: []string{"4/20/25 22:19", "PAUSE", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 17: []string{"4/20/25 23:05", "RESUME", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 18: []string{"4/20/25 23:05", "PAUSE", "trying to findout why the mic isn't streaming"}
+2025/04/27 13:09:42.839935 main.go:65:       row 19: []string{"4/20/25 23:23", "RESUME", "making all async methods into "}
+2025/04/27 13:09:42.839935 main.go:65:       row 20: []string{"4/20/25 23:33", "PAUSE", "making all async methods into "}
+2025/04/27 13:09:42.839935 main.go:57:   → Scanning sheet "2025-04-21"
+2025/04/27 13:09:42.839935 main.go:63:     📑 6 rows in sheet
+2025/04/27 13:09:42.839935 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.845741 main.go:65:       row 2: []string{"4/21/25 00:36", "RESUME", "making all async methods into "}
+2025/04/27 13:09:42.845741 main.go:65:       row 3: []string{"4/21/25 00:43", "PAUSE", "making all async methods into "}
+2025/04/27 13:09:42.845741 main.go:65:       row 4: []string{"4/21/25 03:20", "RESUME", "making all async methods into "}
+2025/04/27 13:09:42.845741 main.go:65:       row 5: []string{"4/21/25 03:39", "PAUSE", "making all async methods into "}
+2025/04/27 13:09:42.845741 main.go:65:       row 6: []string{"4/21/25 06:24", "STOP", "making all async methods into ", "163.2 minutes"}
+2025/04/27 13:09:42.845741 main.go:75:         ✅ STOP found: "making all async methods into " (163.2 minutes)
+2025/04/27 13:09:42.846244 main.go:57:   → Scanning sheet "2025-04-22"
+2025/04/27 13:09:42.846755 main.go:63:     📑 16 rows in sheet
+2025/04/27 13:09:42.846755 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.846755 main.go:65:       row 2: []string{"4/22/25 01:45", "START"}
+2025/04/27 13:09:42.846755 main.go:65:       row 3: []string{"4/23/25 01:45", "PAUSE"}
+2025/04/27 13:09:42.846755 main.go:65:       row 4: []string{"4/24/25 01:45", "RESUME", "converting to single thread"}
+2025/04/27 13:09:42.846755 main.go:65:       row 5: []string{"4/22/25 02:46", "PAUSE", "converting to single thread"}
+2025/04/27 13:09:42.846755 main.go:65:       row 6: []string{"4/22/25 02:54", "RESUME", "converting to single thread"}
+2025/04/27 13:09:42.846755 main.go:65:       row 7: []string{"4/22/25 04:27", "PAUSE", "converting to single thread"}
+2025/04/27 13:09:42.846755 main.go:65:       row 8: []string{"4/22/25 04:32", "RESUME", "converting to single thread"}
+2025/04/27 13:09:42.846755 main.go:65:       row 9: []string{"4/22/25 05:09", "PAUSE", "converting to single thread"}
+2025/04/27 13:09:42.846755 main.go:65:       row 10: []string{"4/22/25 05:16", "RESUME", "converting to single thread"}
+2025/04/27 13:09:42.846755 main.go:65:       row 11: []string{"4/22/25 06:45", "PAUSE", "converting to single thread"}
+2025/04/27 13:09:42.846755 main.go:65:       row 12: []string{"4/23/25 06:45", "STOP", "converting to single thread", "280 minutes"}
+2025/04/27 13:09:42.846755 main.go:75:         ✅ STOP found: "converting to single thread" (280 minutes)
+2025/04/27 13:09:42.846755 main.go:65:       row 13: []string{"4/22/25 07:11", "EXIT", "converting to single thread"}
+2025/04/27 13:09:42.846755 main.go:65:       row 14: []string{"4/22/25 22:23", "EXIT"}
+2025/04/27 13:09:42.846755 main.go:65:       row 15: []string{"4/22/25 22:23", "START", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.846755 main.go:65:       row 16: []string{"4/22/25 22:30", "PAUSE", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.846755 main.go:57:   → Scanning sheet "2025-04-23"
+2025/04/27 13:09:42.846755 main.go:63:     📑 36 rows in sheet
+2025/04/27 13:09:42.846755 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.846755 main.go:65:       row 2: []string{"4/23/25 00:40", "RESUME", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.851767 main.go:65:       row 3: []string{"4/23/25 01:04", "PAUSE", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.851966 main.go:65:       row 4: []string{"4/23/25 02:11", "RESUME", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.851966 main.go:65:       row 5: []string{"4/23/25 02:34", "PAUSE", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.851966 main.go:65:       row 6: []string{"4/23/25 02:37", "RESUME", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.851966 main.go:65:       row 7: []string{"4/23/25 03:03", "PAUSE", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.852471 main.go:65:       row 8: []string{"4/23/25 03:14", "RESUME", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.852471 main.go:65:       row 9: []string{"4/23/25 03:20", "PAUSE", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.852471 main.go:65:       row 10: []string{"4/23/25 03:24", "RESUME", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.852471 main.go:65:       row 11: []string{"4/23/25 04:20", "PAUSE", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.852471 main.go:65:       row 12: []string{"4/23/25 04:54", "RESUME", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.852471 main.go:65:       row 13: []string{"4/23/25 06:59", "PAUSE", "Finishing up the refactor and debugging"}
+2025/04/27 13:09:42.852471 main.go:65:       row 14: []string{"4/24/25 06:59", "STOP", "", "247 minutes"}
+2025/04/27 13:09:42.852471 main.go:75:         ✅ STOP found: "" (247 minutes)
+2025/04/27 13:09:42.852471 main.go:65:       row 15: []string{"4/23/25 12:48", "START", "refactoring mic script"}
+2025/04/27 13:09:42.852471 main.go:65:       row 16: []string{"4/23/25 12:58", "PAUSE", "refactoring mic script"}
+2025/04/27 13:09:42.852471 main.go:65:       row 17: []string{"4/23/25 13:22", "RESUME", "refactoring mic script"}
+2025/04/27 13:09:42.852471 main.go:65:       row 18: []string{"4/23/25 13:43", "PAUSE", "refactoring mic script"}
+2025/04/27 13:09:42.852471 main.go:65:       row 19: []string{"4/23/25 13:55", "RESUME", "refactoring mic script"}
+2025/04/27 13:09:42.852471 main.go:65:       row 20: []string{"4/23/25 14:49", "PAUSE", "refactoring mic script"}
+2025/04/27 13:09:42.852471 main.go:65:       row 21: []string{"4/23/25 17:33", "RESUME", "refactoring mic script"}
+2025/04/27 13:09:42.852471 main.go:65:       row 22: []string{"4/23/25 17:33", "PAUSE", "refactoring mic script"}
+2025/04/27 13:09:42.852471 main.go:65:       row 23: []string{"4/23/25 17:33", "RESUME", "refactoring OnTrack"}
+2025/04/27 13:09:42.852471 main.go:65:       row 24: []string{"4/23/25 18:38", "PAUSE", "refactoring OnTrack"}
+2025/04/27 13:09:42.852471 main.go:65:       row 25: []string{"4/23/25 18:57", "RESUME", "refactoring OnTrack"}
+2025/04/27 13:09:42.853981 main.go:65:       row 26: []string{"4/23/25 20:03", "PAUSE", "refactoring OnTrack"}
+2025/04/27 13:09:42.853981 main.go:65:       row 27: []string{"4/23/25 20:09", "RESUME", "refactoring OnTrack"}
+2025/04/27 13:09:42.853981 main.go:65:       row 28: []string{"4/23/25 20:38", "PAUSE", "refactoring OnTrack"}
+2025/04/27 13:09:42.854139 main.go:65:       row 29: []string{"4/23/25 21:03", "RESUME", "refactoring OnTrack"}
+2025/04/27 13:09:42.854139 main.go:65:       row 30: []string{"4/23/25 21:35", "PAUSE", "refactoring OnTrack"}
+2025/04/27 13:09:42.854139 main.go:65:       row 31: []string{"4/23/25 22:40", "RESUME", "refactoring OnTrack"}
+2025/04/27 13:09:42.854139 main.go:65:       row 32: []string{"4/23/25 23:01", "PAUSE", "refactoring OnTrack"}
+2025/04/27 13:09:42.854139 main.go:65:       row 33: []string{"4/23/25 23:04", "RESUME", "refactoring OnTrack"}
+2025/04/27 13:09:42.854139 main.go:65:       row 34: []string{"4/23/25 23:10", "PAUSE", "refactoring OnTrack"}
+2025/04/27 13:09:42.854139 main.go:65:       row 35: []string{"4/23/25 23:35", "RESUME", "refactoring OnTrack"}
+2025/04/27 13:09:42.854642 main.go:65:       row 36: []string{"4/23/25 23:56", "PAUSE", "refactoring OnTrack"}
+2025/04/27 13:09:42.854642 main.go:57:   → Scanning sheet "2025-04-24"
+2025/04/27 13:09:42.854642 main.go:63:     📑 31 rows in sheet
+2025/04/27 13:09:42.854642 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.854642 main.go:65:       row 2: []string{"4/24/25 00:13", "RESUME", "refactoring OnTrack"}
+2025/04/27 13:09:42.854642 main.go:65:       row 3: []string{"4/24/25 00:24", "PAUSE", "refactoring OnTrack"}
+2025/04/27 13:09:42.854642 main.go:65:       row 4: []string{"4/24/25 01:13", "RESUME", "refactoring OnTrack"}
+2025/04/27 13:09:42.854642 main.go:65:       row 5: []string{"4/24/25 02:21", "PAUSE", "refactoring OnTrack"}
+2025/04/27 13:09:42.857151 main.go:65:       row 6: []string{"4/24/25 02:27", "RESUME", "refactoring OnTrack"}
+2025/04/27 13:09:42.857151 main.go:65:       row 7: []string{"4/24/25 02:33", "PAUSE", "refactoring OnTrack"}
+2025/04/27 13:09:42.857151 main.go:65:       row 8: []string{"4/24/25 03:21", "RESUME", "refactoring OnTrack"}
+2025/04/27 13:09:42.857151 main.go:65:       row 9: []string{"4/24/25 03:28", "PAUSE", "refactoring OnTrack"}
+2025/04/27 13:09:42.857151 main.go:65:       row 10: []string{"4/24/25 04:02", "RESUME", "refactoring OnTrack"}
+2025/04/27 13:09:42.857151 main.go:65:       row 11: []string{"4/24/25 05:05", "PAUSE", "refactoring OnTrack"}
+2025/04/27 13:09:42.857151 main.go:65:       row 12: []string{"4/24/25 05:07", "RESUME", "refactoring OnTrack"}
+2025/04/27 13:09:42.857151 main.go:65:       row 13: []string{"4/24/25 05:08", "PAUSE", "refactoring OnTrack"}
+2025/04/27 13:09:42.857151 main.go:65:       row 14: []string{"4/24/25 05:08", "STOP", "refactoring OnTrack", "477.8 minutes"}
+2025/04/27 13:09:42.857151 main.go:75:         ✅ STOP found: "refactoring OnTrack" (477.8 minutes)
+2025/04/27 13:09:42.857151 main.go:65:       row 15: []string{"4/24/25 05:08", "EXIT", "refactoring OnTrack"}
+2025/04/27 13:09:42.857151 main.go:65:       row 16: []string{"4/24/25 17:42", "START"}
+2025/04/27 13:09:42.857151 main.go:65:       row 17: []string{"4/24/25 17:42", "PAUSE"}
+2025/04/27 13:09:42.857151 main.go:65:       row 18: []string{"4/24/25 17:43", "RESUME", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 19: []string{"4/24/25 18:05", "PAUSE", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 20: []string{"4/24/25 18:10", "RESUME", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 21: []string{"4/24/25 18:13", "PAUSE", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 22: []string{"4/24/25 18:16", "RESUME", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 23: []string{"4/24/25 19:00", "PAUSE", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 24: []string{"4/24/25 19:08", "RESUME", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 25: []string{"4/24/25 19:47", "PAUSE", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 26: []string{"4/24/25 22:04", "RESUME", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 27: []string{"4/24/25 22:37", "PAUSE", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 28: []string{"4/24/25 23:19", "RESUME", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 29: []string{"4/24/25 23:32", "PAUSE", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 30: []string{"4/24/25 23:48", "RESUME", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 31: []string{"4/24/25 23:50", "PAUSE", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:57:   → Scanning sheet "2025-04-25"
+2025/04/27 13:09:42.857151 main.go:63:     📑 27 rows in sheet
+2025/04/27 13:09:42.857151 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.857151 main.go:65:       row 2: []string{"4/25/25 02:03", "RESUME", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 3: []string{"4/25/25 02:47", "PAUSE", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 4: []string{"4/25/25 03:06", "RESUME", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 5: []string{"4/25/25 03:38", "PAUSE", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 6: []string{"4/25/25 03:51", "RESUME", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 7: []string{"4/25/25 04:01", "PAUSE", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 8: []string{"4/25/25 04:53", "RESUME", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 9: []string{"4/25/25 04:53", "PAUSE", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 10: []string{"4/25/25 04:53", "STOP", "validating playback", "242 minutes"}
+2025/04/27 13:09:42.857151 main.go:75:         ✅ STOP found: "validating playback" (242 minutes)
+2025/04/27 13:09:42.857151 main.go:65:       row 11: []string{"4/25/25 04:53", "EXIT", "validating playback"}
+2025/04/27 13:09:42.857151 main.go:65:       row 12: []string{"4/25/25 13:52", "START", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 13: []string{"4/25/25 14:23", "PAUSE", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 14: []string{"4/25/25 14:48", "RESUME", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 15: []string{"4/25/25 14:50", "PAUSE", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 16: []string{"4/25/25 15:13", "RESUME", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 17: []string{"4/25/25 16:29", "PAUSE", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 18: []string{"4/25/25 17:41", "RESUME", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 19: []string{"4/25/25 17:41", "PAUSE", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 20: []string{"4/25/25 17:49", "RESUME", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 21: []string{"4/25/25 18:37", "PAUSE", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 22: []string{"4/25/25 19:08", "RESUME", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 23: []string{"4/25/25 19:16", "PAUSE", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 24: []string{"4/25/25 19:45", "RESUME", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 25: []string{"4/25/25 21:07", "PAUSE", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 26: []string{"4/25/25 23:41", "RESUME", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 27: []string{"4/25/25 23:46", "PAUSE", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:57:   → Scanning sheet "2025-04-26"
+2025/04/27 13:09:42.857151 main.go:63:     📑 23 rows in sheet
+2025/04/27 13:09:42.857151 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.857151 main.go:65:       row 2: []string{"4/26/25 00:10", "RESUME", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 3: []string{"4/26/25 00:34", "PAUSE", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 4: []string{"4/26/25 00:51", "RESUME", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 5: []string{"4/26/25 01:46", "PAUSE", "hopefully will be finished soon"}
+2025/04/27 13:09:42.857151 main.go:65:       row 6: []string{"4/26/25 03:45", "RESUME", "hopefully will be finished soon"}
+2025/04/27 13:09:42.863162 main.go:65:       row 7: []string{"4/26/25 04:20", "PAUSE", "hopefully will be finished soon"}
+2025/04/27 13:09:42.863162 main.go:65:       row 8: []string{"4/26/25 04:21", "STOP", "hopefully will be finished soon", "361.4 minutes"}
+2025/04/27 13:09:42.863162 main.go:75:         ✅ STOP found: "hopefully will be finished soon" (361.4 minutes)
+2025/04/27 13:09:42.863162 main.go:65:       row 9: []string{"4/26/25 04:21", "EXIT", "hopefully will be finished soon"}
+2025/04/27 13:09:42.863162 main.go:65:       row 10: []string{"4/26/25 18:04", "START", "trying to fix transceivers"}
+2025/04/27 13:09:42.863162 main.go:65:       row 11: []string{"4/26/25 18:23", "PAUSE", "trying to fix transceivers"}
+2025/04/27 13:09:42.863162 main.go:65:       row 12: []string{"4/26/25 19:03", "RESUME", "trying to fix transceivers"}
+2025/04/27 13:09:42.863162 main.go:65:       row 13: []string{"4/26/25 19:09", "PAUSE", "trying to fix transceivers"}
+2025/04/27 13:09:42.863162 main.go:65:       row 14: []string{"4/26/25 19:35", "RESUME", "trying to fix transceivers"}
+2025/04/27 13:09:42.863162 main.go:65:       row 15: []string{"4/26/25 21:27", "PAUSE", "trying to fix transceivers"}
+2025/04/27 13:09:42.863162 main.go:65:       row 16: []string{"4/26/25 21:57", "RESUME", "trying to fix transceivers"}
+2025/04/27 13:09:42.863162 main.go:65:       row 17: []string{"4/26/25 22:05", "PAUSE", "trying to fix transceivers"}
+2025/04/27 13:09:42.863162 main.go:65:       row 18: []string{"4/26/25 22:57", "RESUME", "trying to fix transceivers"}
+2025/04/27 13:09:42.863162 main.go:65:       row 19: []string{"4/26/25 23:07", "PAUSE", "trying to fix transceivers"}
+2025/04/27 13:09:42.863162 main.go:65:       row 20: []string{"4/26/25 23:15", "RESUME", "trying to fix transceivers"}
+2025/04/27 13:09:42.863162 main.go:65:       row 21: []string{"4/26/25 23:51", "PAUSE", "trying to fix transceivers"}
+2025/04/27 13:09:42.863162 main.go:65:       row 22: []string{"4/26/25 23:51", "RESUME", "trying to fix transceivers (unity webrtc bugs......)"}
+2025/04/27 13:09:42.863162 main.go:65:       row 23: []string{"4/26/25 23:57", "PAUSE", "trying to fix transceivers (unity webrtc bugs......)"}
+2025/04/27 13:09:42.863162 main.go:57:   → Scanning sheet "2025-04-27"
+2025/04/27 13:09:42.863162 main.go:63:     📑 7 rows in sheet
+2025/04/27 13:09:42.863162 main.go:65:       row 1: []string{"Timestamp", "Event", "Activity Name", "Duration"}
+2025/04/27 13:09:42.863162 main.go:65:       row 2: []string{"4/27/25 00:17", "RESUME", "trying to fix transceivers (unity webrtc bugs......)"}
+2025/04/27 13:09:42.863162 main.go:65:       row 3: []string{"4/27/25 01:11", "PAUSE", "trying to fix transceivers (unity webrtc bugs......)"}
+2025/04/27 13:09:42.863162 main.go:65:       row 4: []string{"4/27/25 01:33", "RESUME", "trying to fix transceivers (unity webrtc bugs......)"}
+2025/04/27 13:09:42.863162 main.go:65:       row 5: []string{"4/27/25 02:20", "PAUSE", "trying to fix transceivers (unity webrtc bugs......)"}
+2025/04/27 13:09:42.863162 main.go:65:       row 6: []string{"4/27/25 12:07", "STOP", "trying to fix transceivers (unity webrtc bugs......)", "293.6 minutes"}
+2025/04/27 13:09:42.863162 main.go:75:         ✅ STOP found: "trying to fix transceivers (unity webrtc bugs......)" (293.6 minutes)
+2025/04/27 13:09:42.863162 main.go:65:       row 7: []string{"4/27/25 12:10", "START", "fixing the timings reported"}
+2025/04/27 13:09:42.863162 main.go:79: 🏁 Total STOP events collected: 39
+2025/04/27 13:09:42.870495 main.go:98: ✅ Wrote "D:\\Repos\\Timer\\parser\\output.docx" with 39 activities
