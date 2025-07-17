@@ -73,11 +73,13 @@ func main() {
 		// Force immediate Excel save before closing
 		go func() {
 			time.Sleep(100 * time.Millisecond) // Let saveToExcel finish
+			
 			App.Quit()
 		}()
 	})
 
 	window.ShowAndRun()
+
 }
 
 func formatDuration(d time.Duration) string {
