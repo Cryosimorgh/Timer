@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os/exec"
 	"sync"
 	"time"
 
@@ -73,7 +74,21 @@ func main() {
 		// Force immediate Excel save before closing
 		go func() {
 			time.Sleep(100 * time.Millisecond) // Let saveToExcel finish
-			
+			// Path to your batch file
+			batFile := "_Git_Push.bat"
+
+			// Create command to execute the batch file
+			cmd := exec.Command("cmd.exe", "/C", batFile)
+
+			// Capture output (optional)
+			output, err := cmd.CombinedOutput()
+			if err != nil {
+				fmt.Printf("Error executing batch file: %v\n", err)
+				return
+			}
+
+			// Print output
+			fmt.Printf("Batch file output:\n%s\n", output)
 			App.Quit()
 		}()
 	})
